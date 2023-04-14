@@ -1,0 +1,145 @@
+{{ $csvURL := .Get "csvfile" }}
+{{ $csv := getCSV "," $csvURL }}
+{{ $height := .Get "height" | default "400px" }}
+{{ $width := .Get "width" | default "800px" }}
+{{ $title := .Get "title" | default "" }}
+{{ $yaxis_title := .Get "yaxis_title" | default ""}}
+{{ $yaxis2_title := .Get "yaxis2_title" | default ""}}
+{{ $y2_series := .Get "y2_series" | default ""}}
+{{ $style := .Get "style" | default "style1" }}
+{{ $style2 := .Get "style2" | default "style2" }}
+{{ $tf := .Get "tf" | default "tf1" }}
+
+<div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
+
+</div>
+
+{{ $y2_series := split $y2_series "," }}
+
+<script>
+    var csvdata = {{ $csv }};
+    var y2_series = {{ $y2_series }};
+    var y2_ids = [];
+    
+    for (let j in y2_series) {
+      y2_ids.push(Number(y2_series[j]));
+    }
+    
+    
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#8CB8CA', '#D4D757'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'style2': {
+            'color': ['', '#FF8F6E', '#93BBCC', '#A8A9AB', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid']
+        },
+        'style3': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'ta': {
+            'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta2': {
+            'color': ['', '#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta3': {
+            'color': ['', '#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta_grey_teal': {
+            'color': ['', '#d7d7d7', '#006c69'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_gold': {
+            'color': ['', '#d7d7d7', '#ffb81d'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_ruby': {
+            'color': ['', '#d7d7d7', '#c41d4a'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_midnight': {
+            'color': ['', '#d7d7d7', '#1c355e'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_karl': {
+            'color': ['', '#d7d7d7', '#b9d9ec'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_baygreen': {
+            'color': ['', '#d7d7d7', '#a0d0cb'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'colorblind': {
+            'color': ['', '#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        
+        'greydash': {
+            'color': ['', '#969696', '#ABABAB', '#C5C5C5', '#D9D9D9', '#E2E2E2'],
+            'dash': ['', 'dot', 'dot', 'dot', 'dot', 'dot']
+        },
+        'extended': {
+            'color': ['', '#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%'
+    }
+    var data = [];
+    var xvals;
+    for (let i in csvdata) {
+        if (i==0) {
+            xvals = csvdata[i].slice(1);
+        } else if ( y2_ids.includes(Number(i)) ) {
+            yaxis2_title = {{ $yaxis2_title }},
+            data.push({x: xvals, y: csvdata[i].slice(1),
+                        name: csvdata[i][0],
+                        type: 'scatter',
+                        yaxis: 'y2',
+                        marker: {color: styles[{{ $style2 }}]['color'][i]},
+                        line: {dash: styles[{{ $style2 }}]['dash'][i]},
+                    })
+
+        } else {
+            yaxis_title = {{ $yaxis_title }},
+            data.push({x: xvals, y: csvdata[i].slice(1),
+                        name: csvdata[i][0],
+                        type: 'scatter',
+                        marker: {color: styles[{{ $style }}]['color'][i]},
+                        line: {dash: styles[{{ $style }}]['dash'][i]},
+                    })
+        }
+    }
+    var layout = {
+        title: {{ $title }},
+        xaxis: {
+                autotick: true,
+                },
+        yaxis: {
+                rangemode: 'tozero',
+                tickformat: tfs[{{ $tf }}],
+                title: yaxis_title,
+                },
+        yaxis2: {
+                title: yaxis2_title,
+                rangemode: 'tozero',
+                tickformat: tfs[{{ $tf }}],
+                overlaying: 'y',
+                side: 'right',
+                showgrid: false,
+                },
+        legend: {"orientation": "h",
+                 x: 0,
+                 y: -0.25},
+    };
+    var config = {responsive: false};
+    Plotly.plot({{ .Get "id" }}, data, layout, config);
+</script>

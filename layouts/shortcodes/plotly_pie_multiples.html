@@ -1,0 +1,107 @@
+{{ $csvURL := .Get "csvfile" }}
+{{ $csv := getCSV "," $csvURL }}
+{{ $height := .Get "height" | default "400px" }}
+{{ $width := .Get "width" | default "800px" }}
+{{ $title := .Get "title" | default "" }}
+{{ $subtitle1 := .Get "subtitle1" | default "" }}
+{{ $subtitle2 := .Get "subtitle2" | default "" }}
+{{ $style := .Get "style" | default "style1" }}
+{{ $tf := .Get "tf" | default "tf1" }}
+
+<div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
+
+</div>
+
+<script>
+    var csvdata = {{ $csv }};
+    
+    var styles = {
+        'style1': {
+            'color': ['#8CB8CA', '#D4D757', '#8CB8CA', '#D4D757'],
+        },
+        'style2': {
+            'color': ['#FF8F6E', '#93BBCC', '#A8A9AB', '#F7CF3F'],
+        },
+        'style3': {
+            'color': ['#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+        },
+        'ta': {
+            'color': ['#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+        },
+        'ta2': {
+            'color': ['#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+        },
+        'ta3': {
+            'color': ['#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+        },
+        'ta_grey_teal': {
+            'color': ['#d7d7d7', '#d7d7d7', '#006c69'],
+        },
+        'ta_grey_gold': {
+            'color': ['#d7d7d7', '#ffb81d'],
+        },
+        'ta_grey_ruby': {
+            'color': ['#d7d7d7', '#c41d4a'],
+        },
+        'ta_grey_midnight': {
+            'color': ['#d7d7d7', '#1c355e'],
+        },
+        'ta_grey_karl': {
+            'color': ['#d7d7d7', '#b9d9ec'],
+        },
+        'ta_grey_baygreen': {
+            'color': ['#d7d7d7', '#a0d0cb'],
+        },
+        'ta_secondary_green': {
+            'color': ['#F2F2F2','#D9D9D9','#9FCFCA'],
+        },
+        'colorblind': {
+            'color': ['#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'extended': {
+            'color': ['#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%'
+    }
+    
+    var data = [];
+    var labels;
+    var maxi;
+    var annot = [];
+    
+    for (let i in csvdata) {
+        maxi = i;
+        if (i==0) {
+            labels = csvdata[i].slice(1);
+        } else {
+            data.push({values: csvdata[i].slice(1), 
+                       labels: labels,
+                       type: 'pie',
+                       marker: {colors: styles[{{ $style }}]['color']},
+                       domain: {row: 0, column: i-1},
+                       direction: 'clockwise',
+                       sort: false,
+                    })
+            annot.push({text:csvdata[i][0],
+                        showarrow: false,
+                        x: 0.135 + (i-1) * 0.365,
+                        y: 1.1,
+                        })
+        }
+    }
+
+    var layout = {
+        title: {{ $title }},
+        grid: {rows: 1, columns: maxi},
+        legend: {"orientation": "h",
+                 x: 0,
+                 y: -0.10},
+        annotations: annot,
+    };
+    var config = {responsive: false};
+    Plotly.newPlot({{ .Get "id" }}, data, layout, config);
+</script>

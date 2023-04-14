@@ -1,0 +1,17 @@
+{{ partial "hooks/head.html" . }}
+{{ partial "header.html" . }}
+
+<article id="main">
+  <header style="background-image: /images/header.jpg">
+    <h2>{{ .Title }}</h2>
+    {{ with .Params.subtitle }}
+    <p>{{ . }}</p>
+    {{ end }}
+	</header>
+	<section class="wrapper style_ta">
+		<div class="inner">
+      {{ .Content }}
+		</div>
+	</section>
+</article>
+{{ partial "footer.html" . }}

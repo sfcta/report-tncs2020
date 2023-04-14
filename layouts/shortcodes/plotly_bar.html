@@ -1,0 +1,147 @@
+{{ $csvURL := .Get "csvfile" }}
+{{ $csv := getCSV "," $csvURL }}
+{{ $height := .Get "height" | default "400px" }}
+{{ $width := .Get "width" | default "800px" }}
+{{ $title := .Get "title" | default "" }}
+{{ $style := .Get "style" | default "style1" }}
+{{ $bmode := .Get "bmode" | default "group" }}
+{{ $orientation := .Get "orientation" | default "v" }}
+{{ $tf := .Get "tf" | default "tf1" }}
+{{ $bw := .Get "bw" | default "auto" }}
+{{ $yaxis_label := .Get "yaxis_label" | default "" }}
+{{ $xaxis_label := .Get "xaxis_label" | default "" }}
+
+<div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
+
+</div>
+
+<script>
+    var csvdata = {{ $csv }};
+
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+        },
+        'style2': {
+            'color': ['', '#F7CF3F', '#CA7F9B', '#A8A9AB', '#F7CF3F'],
+        },
+        'style3': {
+            'color': ['', '#69a1b9', '#7bacc1', '#8cb7c9', '#9dc2d1', '#afcdd9', '#e2b5c7', '#daa3b9', '#cc7e9d', '#be5981'],
+        },
+        'tnc': {
+            'color': ['', '#8c8d98', '#f5a7e1', '#8CB8CA'],
+        },
+        'ta': {
+            'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+        },
+        'ta2': {
+            'color': ['', '#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+        },
+        'ta3': {
+            'color': ['', '#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+        },
+        'ta_grey_teal': {
+            'color': ['', '#d7d7d7', '#006c69'],
+        },
+        'ta_grey_gold': {
+            'color': ['', '#d7d7d7', '#ffb81d'],
+        },
+        'ta_grey_ruby': {
+            'color': ['', '#d7d7d7', '#c41d4a'],
+        },
+        'ta_grey_midnight': {
+            'color': ['', '#d7d7d7', '#1c355e'],
+        },
+        'ta_grey_karl': {
+            'color': ['', '#d7d7d7', '#b9d9ec'],
+        },
+        'ta_grey_baygreen': {
+            'color': ['', '#d7d7d7', '#a0d0cb'],
+        },
+        'colorblind': {
+            'color': ['', '#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'extended': {
+            'color': ['', '#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'accent': {
+            'color': ['', '#d7d7d7','#FF8D6D'],
+        },
+        'grey3_accent': {
+            'color': ['','#F2F2F2', '#D9D9D9','#BFBFBF','#FF8D6D'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%',
+        'tf3': ',.1%'
+    }
+    var data = [];
+    var xvals;
+    
+    if ({{ $orientation }}=='h') {
+        for (let i in csvdata) {
+            if (i==0) {
+                xvals = csvdata[i].slice(1);
+            } else {
+                data.push({y: xvals, x: csvdata[i].slice(1),
+                            name: csvdata[i][0],
+                            type: 'bar',
+                            marker: {color: styles[{{ $style }}]['color'][i]},
+                            width: {{ $bw }},
+                            orientation: {{ $orientation }},
+                        })
+            }
+        }
+        
+        var layout = {
+            title: {{ $title }},
+            yaxis: {
+                    autotick: false,
+                    title: {{ $yaxis_label }},
+                    },
+            xaxis: {
+                    rangemode: 'tozero',
+                    tickformat: tfs[{{ $tf }}],
+                    title: {text: {{ $xaxis_label }},
+                            standoff: 20}
+                    },
+            barmode: {{ $bmode }},
+            legend: {"orientation": "h", "traceorder": "normal"},
+            }
+    } else {
+        for (let i in csvdata) {
+            if (i==0) {
+                xvals = csvdata[i].slice(1);
+            } else {
+                data.push({x: xvals, y: csvdata[i].slice(1),
+                            name: csvdata[i][0],
+                            type: 'bar',
+                            marker: {color: styles[{{ $style }}]['color'][i]},
+                            width: {{ $bw }},
+                        })
+            }
+        }
+        
+        var layout = {
+            title: {{ $title }},
+            xaxis: {
+                    autotick: false,
+                    title: {text: {{ $xaxis_label }},
+                            standoff: 40}
+                    },
+            yaxis: {
+                    rangemode: 'tozero',
+                    tickformat: tfs[{{ $tf }}],
+                    title: {{ $yaxis_label }},
+                    },
+            barmode: {{ $bmode }},
+            bargap: 0.5,
+            legend: {"orientation": "h", "traceorder": "normal", "x": 0.5, "xanchor": "center"},
+            } 
+        };
+    
+    var config = {responsive: false};
+    Plotly.plot({{ .Get "id" }}, data, layout, config);
+</script>

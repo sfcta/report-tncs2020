@@ -1,0 +1,652 @@
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!DOCTYPE HTML>
+
+<html lang="en">
+	<head>
+	  <title>Labor</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="origin">
+
+    
+    
+    <meta name="generator" content="Hugo 0.110.0">
+
+    
+<link rel="stylesheet" href="/tncs2020/css/main.min.b33a435cfb2bbfccae26503a91f834ff67cad9efe9e15ef719a7198baea57109e48353c7ddd513d13398f00e1836772309a509639f07aa5f56971e64c274709e.css" integrity="sha512-szpDXPsrv8yuJlA6kfg0/2fK2e/p4V73GacZi66lcQnkg1PH3dUT0TOY8A4YNncjCaUJY58Hql9Wlx5kwnRwng==">
+
+
+<noscript><link rel="stylesheet" href="/tncs2020/css/noscript.min.e6f1ba19697eecfddfbf83ff7181b98181998f163d7005f6ae923451556bf85bef357f43dffe1522b92c1efab7fb38441f479e39b7a03e4313a8ef12b0b01f65.css" integrity="sha512-5vG6GWl&#43;7P3fv4P/cYG5gYGZjxY9cAX2rpI0UVVr&#43;FvvNX9D3/4VIrksHvq3&#43;zhEH0eeObegPkMTqO8SsLAfZQ=="></noscript>
+
+
+
+<link rel="stylesheet" href="/tncs2020/css/styles.min.546cafe4b54817ff44820aae68782f5ec0a9e302c5caa45b8041a785da76248e80da5df343f1ac6708de0d5a34e24e5b94a293f91269a51fbc55d7032dfcb5c2.css" integrity="sha512-VGyv5LVIF/9EggquaHgvXsCp4wLFyqRbgEGnhdp2JI6A2l3zQ/GsZwjeDVo04k5blKKT&#43;RJppR&#43;8VdcDLfy1wg==">
+
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Labor"/>
+<meta name="twitter:description" content="This section examines hours worked, miles driven, and driver suspensions.
+Each record in the Number of Hours and Number of Miles reports is a driver day. Driver IDs are withheld from the public TNC Annual Reports, limiting analysis of driver patterns such as the number of drivers who exceed drive-time limits multiple times a year or distributions of annual driver mileage.
+How many hours a day does a driver drive? The daily number of hours worked can identify when state law is violated, and can also give insights into labor conditions and driver earning potential."/>
+
+    <meta property="og:title" content="Labor" />
+<meta property="og:description" content="This section examines hours worked, miles driven, and driver suspensions.
+Each record in the Number of Hours and Number of Miles reports is a driver day. Driver IDs are withheld from the public TNC Annual Reports, limiting analysis of driver patterns such as the number of drivers who exceed drive-time limits multiple times a year or distributions of annual driver mileage.
+How many hours a day does a driver drive? The daily number of hours worked can identify when state law is violated, and can also give insights into labor conditions and driver earning potential." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://prospector/tncs2020/ch5_labor/" /><meta property="article:section" content="" />
+<meta property="article:published_time" content="2022-09-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-21T00:00:00+00:00" />
+
+    
+	</head>
+	<body class="landing is-preload">
+
+		
+			<div id="page-wrapper">
+
+				
+          <header id="header">
+            <h1><a href="http://prospector/tncs2020/">TNCs 2020 Beta</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+                  <a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+				              
+				              <li><a href="/tncs2020/">Home</a></li>
+				              
+				              <li><a href="/tncs2020/ch0_exec_summ/">Executive Summary</a></li>
+				              
+				              <li><a href="/tncs2020/ch1_introduction/">1. Introduction</a></li>
+				              
+				              <li><a href="/tncs2020/ch2_compliance/">2. Compliance &amp; Integrity</a></li>
+				              
+				              <li><a href="/tncs2020/ch3_general/">3. General Characteristics</a></li>
+				              
+				              <li><a href="/tncs2020/ch4_public_safety/">4. Public Safety</a></li>
+				              
+				              <li><a href="/tncs2020/ch5_labor/">5. Labor</a></li>
+				              
+				              <li><a href="/tncs2020/ch6_environment/">6. Environment</a></li>
+				              
+				              <li><a href="/tncs2020/ch7_accessibility/">7. Accessibility</a></li>
+				              
+				              <li><a href="/tncs2020/ch8_findings/">8. Findings</a></li>
+				              
+				              <li><a href="/tncs2020/xa_cpuc_decisions/">Appendix A. Major CPUC Decisions on Data Reporting and Confidentiality</a></li>
+				              
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+
+<article id="main">
+  <header style="background-image: /images/header.jpg">
+    <h2>Labor</h2>
+    
+    <p>Chapter 5</p>
+    
+	</header>
+	<section class="wrapper style_ta">
+		<div class="inner">
+      <p>This section examines hours worked, miles driven, and driver suspensions.<br>
+Each record in the <em>Number of Hours</em> and <em>Number of Miles</em> reports is a driver day. Driver IDs are withheld from the public TNC Annual Reports, limiting analysis of driver patterns such as the number of drivers who exceed drive-time limits multiple times a year or distributions of annual driver mileage.</p>
+<h2 id="how-many-hours-a-day-does-a-driver-drive">How many hours a day does a driver drive?</h2>
+<p>The daily number of hours worked can identify when state law is violated, and can also give insights into labor conditions and driver earning potential.</p>
+<p>Table 26 shows the average number of hours worked by drivers for each company before and during Covid.  The table shows that Uber driver worked more hours than Lyft drivers both before and during Covid.  Uber drivers increased their average daily driving hours during Covid by 14%, from 4.6 to 5.3, while Lyft’s average daily driver hours remained almost flat.</p>
+<figcaption>Table 26: Average Hours per Driver Day by Company, Before and During Covid</figcaption>
+<table>
+<thead>
+<tr>
+<th>Era</th>
+<th style="text-align:right">Uber</th>
+<th style="text-align:right">Lyft</th>
+<th style="text-align:right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-Covid</td>
+<td style="text-align:right">4.6</td>
+<td style="text-align:right">3.8</td>
+<td style="text-align:right">4.2</td>
+</tr>
+<tr>
+<td>Covid</td>
+<td style="text-align:right">5.3</td>
+<td style="text-align:right">3.9</td>
+<td style="text-align:right">4.7</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align:right">4.9</td>
+<td style="text-align:right">3.8</td>
+<td style="text-align:right">4.3</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 17 shows the distribution of driver days by the number of hours worked by each company’s driver, before and during Covid.  As with the table above, it shows that Lyft reported more driver days and driver hours than Uber before Covid, and fewer driver days and driver hours during Covid.  Both company’s driver days peaked at 1 hour per day, both before and during Covid, with longer days steadily less frequent.  Uber’s driver hour during Covid drop off steeply, unlike Uber’s pre-Covid hours or Lyft’s hours before or during Covid.  Lyft’s report included 123,000 driver days with 0 hours, while Uber’s included no driver days with 0 hours, and both companies reported driver days with 10 or more hours, which will be discussed in more detail in the next section.</p>
+<div id='Fig17' style="height:full;width:full">
+</div>
+<script>
+    var csvdata = [["company","0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"],["Uber, Pre-Covid","149,764","906,863","770,701","806,238","778,998","719,781","639,857","544,746","450,319","359,207","276,105","204,254","141,082","95,874","48,667","22,142","10,915","5,679","3,111","1,169","770","603","530","493","908"],["Lyft, Pre-Covid","0","1,928,611","1,677,571","1,587,309","1,379,464","1,139,322","910,879","711,381","544,775","406,428","293,656","197,145","130,573","84,188","35,244","20,812","4,622","1,528","660","277","134","67","38","13","2"],["Uber, Covid","118,041","1,166,581","530,952","424,738","373,237","330,691","287,791","240,874","195,436","154,317","116,640","83,518","57,443","40,409","21,008","12,071","7,520","4,623","3,082","1,058","762","704","584","591","1,219"],["Lyft, Covid","0","415,906","351,132","337,820","308,893","266,940","217,929","170,625","130,595","95,726","66,718","40,891","27,245","19,368","2,838","1,014","438","210","96","49","27","13","12","3","0"]];
+
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#8CB8CA', '#D4D757'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'style2': {
+            'color': ['', '#FF8F6E', '#93BBCC', '#A8A9AB', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid']
+        },
+        'style3': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'ta': {
+            'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta2': {
+            'color': ['', '#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta3': {
+            'color': ['', '#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'tnc': {
+            'color': ['', '#8c8d98', '#f5a7e1','#c5c5c5'],
+            'dash': ['', 'solid', 'solid','dot']
+        },
+        'tnc_alt_dash': {
+            'color': ['', '#8c8d98', '#f5a7e1','#8c8d98', '#f5a7e1',],
+            'dash': ['', 'solid', 'solid','dot','dot']
+        },
+        'ta_grey_teal': {
+            'color': ['', '#d7d7d7', '#006c69'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_gold': {
+            'color': ['', '#d7d7d7', '#ffb81d'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_ruby': {
+            'color': ['', '#d7d7d7', '#c41d4a'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_midnight': {
+            'color': ['', '#d7d7d7', '#1c355e'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_karl': {
+            'color': ['', '#d7d7d7', '#b9d9ec'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_baygreen': {
+            'color': ['', '#d7d7d7', '#a0d0cb'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'colorblind': {
+            'color': ['', '#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'extended': {
+            'color': ['', '#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%'
+    }
+    var data = [];
+    var xvals;
+    for (let i in csvdata) {
+        if (i==0) {
+            xvals = csvdata[i].slice(1);
+        } else {
+            data.push({x: xvals, y: csvdata[i].slice(1),
+                        name: csvdata[i][0],
+                        type: 'scatter',
+                        marker: {color: styles["tnc_alt_dash"]['color'][i]},
+                        line: {dash: styles["tnc_alt_dash"]['dash'][i]}
+                    })
+        }
+    }
+    var layout = {
+        title: "Distribution of Driver Days by Hours Worked",
+        xaxis: {
+                autotick: true,
+                },
+        yaxis: {
+                rangemode: 'tozero',
+                tickformat: tfs["tf1"]
+                },
+    };
+    var config = {responsive: false};
+    Plotly.plot("Fig17", data, layout, config);
+</script>
+<figcaption>Figure 17: Distribution of Driver Days by Hours Worked</figcaption><br/>
+<p>This suggests that either the Covid pandemic had different effects on Uber than on Lyft; that each company applied different reporting practices; or that each company’s reporting practices changed in different ways before and during the pandemic.</p>
+<p>Figure 18 shows the total driver hours reported each day from September 2019 through August 2020.  The time series shows inconsistencies that reveal another failure to develop or enforce consistent reporting requirements.  Uber's Number of Hours report is missing data for about the first 10 days of every month, and has about 1 day every month with 10 times the volume of an average day for that month.  Lyft's hours show a weekly cyclical pattern that seems logical.  However, prior to Covid the report more driver hours than Uber and during Covid the report less, which is a trend that does not make logical sense.</p>
+<div id='Fig18' style="height:full;width:full">
+</div>
+<script>
+    var csvdata = [["date","9/1/2019","9/2/2019","9/3/2019","9/4/2019","9/5/2019","9/6/2019","9/7/2019","9/8/2019","9/9/2019","9/10/2019","9/11/2019","9/12/2019","9/13/2019","9/14/2019","9/15/2019","9/16/2019","9/17/2019","9/18/2019","9/19/2019","9/20/2019","9/21/2019","9/22/2019","9/23/2019","9/24/2019","9/25/2019","9/26/2019","9/27/2019","9/28/2019","9/29/2019","9/30/2019","10/1/2019","10/2/2019","10/3/2019","10/4/2019","10/5/2019","10/6/2019","10/7/2019","10/8/2019","10/9/2019","10/10/2019","10/11/2019","10/12/2019","10/13/2019","10/14/2019","10/15/2019","10/16/2019","10/17/2019","10/18/2019","10/19/2019","10/20/2019","10/21/2019","10/22/2019","10/23/2019","10/24/2019","10/25/2019","10/26/2019","10/27/2019","10/28/2019","10/29/2019","10/30/2019","10/31/2019","11/1/2019","11/2/2019","11/3/2019","11/4/2019","11/5/2019","11/6/2019","11/7/2019","11/8/2019","11/9/2019","11/10/2019","11/11/2019","11/12/2019","11/13/2019","11/14/2019","11/15/2019","11/16/2019","11/17/2019","11/18/2019","11/19/2019","11/20/2019","11/21/2019","11/22/2019","11/23/2019","11/24/2019","11/25/2019","11/26/2019","11/27/2019","11/28/2019","11/29/2019","11/30/2019","12/1/2019","12/2/2019","12/3/2019","12/4/2019","12/5/2019","12/6/2019","12/7/2019","12/8/2019","12/9/2019","12/10/2019","12/11/2019","12/12/2019","12/13/2019","12/14/2019","12/15/2019","12/16/2019","12/17/2019","12/18/2019","12/19/2019","12/20/2019","12/21/2019","12/22/2019","12/23/2019","12/24/2019","12/25/2019","12/26/2019","12/27/2019","12/28/2019","12/29/2019","12/30/2019","12/31/2019","1/1/2020","1/2/2020","1/3/2020","1/4/2020","1/5/2020","1/6/2020","1/7/2020","1/8/2020","1/9/2020","1/10/2020","1/11/2020","1/12/2020","1/13/2020","1/14/2020","1/15/2020","1/16/2020","1/17/2020","1/18/2020","1/19/2020","1/20/2020","1/21/2020","1/22/2020","1/23/2020","1/24/2020","1/25/2020","1/26/2020","1/27/2020","1/28/2020","1/29/2020","1/30/2020","1/31/2020","2/1/2020","2/2/2020","2/3/2020","2/4/2020","2/5/2020","2/6/2020","2/7/2020","2/8/2020","2/9/2020","2/10/2020","2/11/2020","2/12/2020","2/13/2020","2/14/2020","2/15/2020","2/16/2020","2/17/2020","2/18/2020","2/19/2020","2/20/2020","2/21/2020","2/22/2020","2/23/2020","2/24/2020","2/25/2020","2/26/2020","2/27/2020","2/28/2020","2/29/2020","3/1/2020","3/2/2020","3/3/2020","3/4/2020","3/5/2020","3/6/2020","3/7/2020","3/8/2020","3/9/2020","3/10/2020","3/11/2020","3/12/2020","3/13/2020","3/14/2020","3/15/2020","3/16/2020","3/17/2020","3/18/2020","3/19/2020","3/20/2020","3/21/2020","3/22/2020","3/23/2020","3/24/2020","3/25/2020","3/26/2020","3/27/2020","3/28/2020","3/29/2020","3/30/2020","3/31/2020","4/1/2020","4/2/2020","4/3/2020","4/4/2020","4/5/2020","4/6/2020","4/7/2020","4/8/2020","4/9/2020","4/10/2020","4/11/2020","4/12/2020","4/13/2020","4/14/2020","4/15/2020","4/16/2020","4/17/2020","4/18/2020","4/19/2020","4/20/2020","4/21/2020","4/22/2020","4/23/2020","4/24/2020","4/25/2020","4/26/2020","4/27/2020","4/28/2020","4/29/2020","4/30/2020","5/1/2020","5/2/2020","5/3/2020","5/4/2020","5/5/2020","5/6/2020","5/7/2020","5/8/2020","5/9/2020","5/10/2020","5/11/2020","5/12/2020","5/13/2020","5/14/2020","5/15/2020","5/16/2020","5/17/2020","5/18/2020","5/19/2020","5/20/2020","5/21/2020","5/22/2020","5/23/2020","5/24/2020","5/25/2020","5/26/2020","5/27/2020","5/28/2020","5/29/2020","5/30/2020","5/31/2020","6/1/2020","6/2/2020","6/3/2020","6/4/2020","6/5/2020","6/6/2020","6/7/2020","6/8/2020","6/9/2020","6/10/2020","6/11/2020","6/12/2020","6/13/2020","6/14/2020","6/15/2020","6/16/2020","6/17/2020","6/18/2020","6/19/2020","6/20/2020","6/21/2020","6/22/2020","6/23/2020","6/24/2020","6/25/2020","6/26/2020","6/27/2020","6/28/2020","6/29/2020","6/30/2020","7/1/2020","7/2/2020","7/3/2020","7/4/2020","7/5/2020","7/6/2020","7/7/2020","7/8/2020","7/9/2020","7/10/2020","7/11/2020","7/12/2020","7/13/2020","7/14/2020","7/15/2020","7/16/2020","7/17/2020","7/18/2020","7/19/2020","7/20/2020","7/21/2020","7/22/2020","7/23/2020","7/24/2020","7/25/2020","7/26/2020","7/27/2020","7/28/2020","7/29/2020","7/30/2020","7/31/2020","8/1/2020","8/2/2020","8/3/2020","8/4/2020","8/5/2020","8/6/2020","8/7/2020","8/8/2020","8/9/2020","8/10/2020","8/11/2020","8/12/2020","8/13/2020","8/14/2020","8/15/2020","8/16/2020","8/17/2020","8/18/2020","8/19/2020","8/20/2020","8/21/2020","8/22/2020","8/23/2020","8/24/2020","8/25/2020","8/26/2020","8/27/2020","8/28/2020","8/29/2020","8/30/2020","8/31/2020"],["Uber","0","0","0","0","0","0","0","0","1,414,433","160,566","166,829","178,434","191,973","168,418","137,446","151,078","156,699","164,061","176,852","188,774","170,275","131,299","148,503","148,526","162,259","174,012","191,967","172,485","137,650","140,906","0","0","0","0","0","0","0","0","0","1,580,696","182,160","169,687","133,391","139,849","147,586","156,588","168,572","183,735","168,158","130,470","144,432","149,681","156,190","169,720","183,327","173,632","133,712","138,157","145,970","153,248","169,879","0","0","0","0","0","0","0","0","0","141,292","1,657,913","155,488","162,237","172,234","195,096","182,536","144,421","156,346","162,423","165,514","181,856","197,794","181,077","143,419","150,786","158,390","157,711","97,061","124,576","142,505","0","0","0","0","0","0","0","0","0","159,990","169,297","1,631,819","201,134","183,986","141,191","147,133","154,698","163,321","173,511","189,377","172,200","136,236","135,402","112,150","71,023","119,821","151,683","153,890","124,717","138,162","169,541","1,300,874","0","0","0","0","0","0","0","0","182,221","167,483","132,784","153,210","158,770","164,694","168,917","182,450","164,315","128,693","132,019","154,659","159,865","167,160","178,911","162,349","126,891","151,958","156,093","161,406","169,533","182,182","0","1,539,981","0","0","0","0","0","0","0","161,999","168,144","175,001","185,241","196,166","170,987","137,059","136,470","161,753","168,946","178,391","194,502","173,911","134,831","158,894","165,917","167,665","176,923","189,054","169,644","0","0","1,817,647","0","0","0","0","0","0","192,704","197,856","194,123","196,336","171,022","132,253","141,987","131,609","125,746","116,674","96,694","82,624","65,716","86,506","83,034","82,126","77,784","74,112","62,258","49,538","62,495","61,369","0","0","0","835,358","0","0","0","0","0","86,542","78,445","56,871","83,510","84,808","77,448","81,183","82,176","73,517","57,090","77,765","83,112","85,963","85,497","84,217","74,970","58,439","79,691","81,517","83,938","83,988","0","0","0","0","686,836","0","0","0","0","51,578","71,571","79,562","81,853","83,380","85,042","75,633","58,205","72,903","79,711","82,493","84,665","88,351","79,529","62,615","65,989","77,536","81,807","84,494","90,028","80,209","56,863","0","0","0","0","0","706,855","0","0","0","87,572","90,152","100,350","93,857","71,981","81,464","87,979","91,678","94,591","104,999","95,451","67,824","82,193","88,395","92,553","95,949","105,948","97,594","74,521","85,029","86,564","0","0","0","0","0","0","804,676","0","0","103,207","92,411","73,071","86,345","88,407","90,772","95,083","101,629","92,991","71,966","86,267","90,760","94,623","98,051","106,150","98,008","74,136","92,563","96,455","100,292","101,720","106,624","0","0","0","0","0","0","0","886,404","0","98,023","102,663","107,931","113,605","123,429","113,610","90,207","103,208","106,724","113,264","115,805","116,699","109,883","85,712","101,620","105,547","110,073","114,581","125,192","115,340","90,427","104,640"],["Lyft","194,175","165,908","213,394","229,481","244,368","273,690","239,026","181,009","210,810","221,576","230,977","243,475","270,330","233,647","174,504","204,397","215,959","225,625","240,737","264,523","228,536","169,176","201,130","214,864","223,605","236,469","263,746","224,787","171,251","193,630","209,671","221,059","232,961","258,546","224,339","165,812","193,031","204,068","213,402","231,709","254,310","224,000","168,844","188,343","203,455","216,469","230,540","257,420","224,282","165,109","198,654","208,683","218,659","235,200","263,920","238,184","165,904","196,144","209,933","221,072","241,122","252,648","222,413","176,227","208,118","215,311","222,511","237,182","259,213","224,174","170,801","177,471","206,003","213,987","230,945","254,809","224,788","168,020","195,233","203,952","210,712","226,007","254,284","222,636","165,705","205,668","217,749","218,023","123,719","177,235","202,704","178,727","216,602","218,403","215,712","234,367","263,018","227,212","166,002","203,552","214,629","221,315","233,199","253,944","220,713","157,929","195,242","210,301","220,161","230,096","250,163","217,304","168,099","188,184","155,016","94,326","165,160","209,002","207,828","164,479","197,818","218,765","145,958","190,383","229,582","216,792","167,051","207,856","213,486","227,403","239,494","266,670","230,895","172,358","222,884","234,173","241,012","252,207","278,582","244,290","181,608","195,453","230,395","239,786","252,091","277,052","245,583","181,093","222,135","234,771","244,226","257,702","286,417","251,189","201,840","209,819","229,411","239,538","251,039","279,363","242,938","176,700","220,618","231,239","242,096","255,515","277,353","231,777","180,094","186,639","222,366","236,705","250,979","279,131","239,840","175,181","217,647","227,334","232,853","247,378","272,888","235,071","173,189","212,523","219,598","226,782","245,544","264,694","223,126","154,782","198,130","205,120","213,044","209,774","215,714","177,701","133,856","161,038","134,300","133,261","123,234","101,493","83,812","64,797","86,224","84,035","81,887","77,442","74,860","60,939","48,733","63,758","63,038","61,931","60,968","60,455","50,382","40,672","51,222","51,823","53,509","52,093","51,702","45,565","34,263","48,265","49,117","47,412","47,943","49,038","41,811","33,294","44,858","46,883","47,685","47,084","47,884","40,892","32,989","44,870","45,890","46,720","47,402","48,617","40,566","32,051","43,619","45,986","46,337","47,056","49,244","41,441","29,749","42,942","46,035","47,118","48,022","50,398","41,406","31,985","43,791","45,951","47,286","48,758","50,662","42,270","32,605","36,560","45,754","48,414","50,388","55,728","45,593","27,331","42,019","46,632","50,437","51,283","52,914","48,076","36,772","50,357","60,357","61,528","62,778","67,255","60,259","47,226","61,433","60,671","63,189","64,955","70,488","62,825","42,413","54,577","62,443","61,720","62,575","68,515","61,964","43,590","56,983","59,895","61,253","65,398","65,612","52,701","43,364","54,209","59,314","60,264","63,064","68,993","63,576","48,236","57,400","58,279","59,136","60,904","67,234","60,183","48,057","57,354","60,123","62,554","63,802","65,855","58,517","44,376","53,899","58,149","60,638","63,500","66,218","60,932","47,510","55,941","57,656","60,311","62,520","70,278","62,942","47,712","57,769","62,799","63,388","66,755","67,825","59,034","44,990","55,130","59,094","63,263","61,174","66,755","60,130","44,019","58,737","63,082","63,241","66,925","73,495","66,943","51,728","57,284"]];
+
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#8CB8CA', '#D4D757'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'style2': {
+            'color': ['', '#FF8F6E', '#93BBCC', '#A8A9AB', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid']
+        },
+        'style3': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'ta': {
+            'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta2': {
+            'color': ['', '#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta3': {
+            'color': ['', '#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'tnc': {
+            'color': ['', '#8c8d98', '#f5a7e1','#c5c5c5'],
+            'dash': ['', 'solid', 'solid','dot']
+        },
+        'tnc_alt_dash': {
+            'color': ['', '#8c8d98', '#f5a7e1','#8c8d98', '#f5a7e1',],
+            'dash': ['', 'solid', 'solid','dot','dot']
+        },
+        'ta_grey_teal': {
+            'color': ['', '#d7d7d7', '#006c69'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_gold': {
+            'color': ['', '#d7d7d7', '#ffb81d'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_ruby': {
+            'color': ['', '#d7d7d7', '#c41d4a'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_midnight': {
+            'color': ['', '#d7d7d7', '#1c355e'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_karl': {
+            'color': ['', '#d7d7d7', '#b9d9ec'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_baygreen': {
+            'color': ['', '#d7d7d7', '#a0d0cb'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'colorblind': {
+            'color': ['', '#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'extended': {
+            'color': ['', '#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%'
+    }
+    var data = [];
+    var xvals;
+    for (let i in csvdata) {
+        if (i==0) {
+            xvals = csvdata[i].slice(1);
+        } else {
+            data.push({x: xvals, y: csvdata[i].slice(1),
+                        name: csvdata[i][0],
+                        type: 'scatter',
+                        marker: {color: styles["tnc"]['color'][i]},
+                        line: {dash: styles["tnc"]['dash'][i]}
+                    })
+        }
+    }
+    var layout = {
+        title: "Driver Hours by Day",
+        xaxis: {
+                autotick: true,
+                },
+        yaxis: {
+                rangemode: 'tozero',
+                tickformat: tfs["tf1"]
+                },
+    };
+    var config = {responsive: false};
+    Plotly.plot("Fig18", data, layout, config);
+</script>
+<figcaption>Figure 18: Driver Hours by Day</figcaption><br/>
+<h2 id="how-often-are-legal-drive-time-limits-exceeded">How often are legal drive-time limits exceeded?</h2>
+<p>California law limits drivers providing passenger transportation to 10 hours within a 24-hour period.  Figure 19 shows the share of driver days by number of hours driven for each company.  It shows that each company has drivers exceeding legal drive time limits.  Before Covid, 8% of Uber’s driver days exceeded 10 hours, and during Covid, 6% of Uber’s driver days exceeded 10 hours.  Before and during the Covid, 4% of Lyft’s driver days exceeded 10 hours.  This suggests a profound regulatory failure by CPUC, with over 1.3 annual million violations of California labor laws going unnoticed and unchallenged.</p>
+<div id='Fig19' style="height:full;width:full">
+</div>
+<script>
+    var csvdata = [["Hour Bin","Uber","Lyft"],["\u003c 4","6,026,113","7,986,706"],["4 to 8","3,409,495","4,092,446"],["8 to 10","906,269","862,528"],["\u003e 10","770,789","567,508"]];
+
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+        },
+        'style2': {
+            'color': ['', '#F7CF3F', '#CA7F9B', '#A8A9AB', '#F7CF3F'],
+        },
+        'style3': {
+            'color': ['', '#69a1b9', '#7bacc1', '#8cb7c9', '#9dc2d1', '#afcdd9', '#e2b5c7', '#daa3b9', '#cc7e9d', '#be5981'],
+        },
+        'tnc': {
+            'color': ['', '#8c8d98', '#f5a7e1', '#8CB8CA'],
+        },
+        'ta': {
+            'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+        },
+        'ta2': {
+            'color': ['', '#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+        },
+        'ta3': {
+            'color': ['', '#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+        },
+        'ta_grey_teal': {
+            'color': ['', '#d7d7d7', '#006c69'],
+        },
+        'ta_grey_gold': {
+            'color': ['', '#d7d7d7', '#ffb81d'],
+        },
+        'ta_grey_ruby': {
+            'color': ['', '#d7d7d7', '#c41d4a'],
+        },
+        'ta_grey_midnight': {
+            'color': ['', '#d7d7d7', '#1c355e'],
+        },
+        'ta_grey_karl': {
+            'color': ['', '#d7d7d7', '#b9d9ec'],
+        },
+        'ta_grey_baygreen': {
+            'color': ['', '#d7d7d7', '#a0d0cb'],
+        },
+        'colorblind': {
+            'color': ['', '#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'extended': {
+            'color': ['', '#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'accent': {
+            'color': ['', '#d7d7d7','#FF8D6D'],
+        },
+        'grey3_accent': {
+            'color': ['','#F2F2F2', '#D9D9D9','#BFBFBF','#FF8D6D'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%',
+        'tf3': ',.1%'
+    }
+    var data = [];
+    var xvals;
+    
+    if ("v"=='h') {
+        for (let i in csvdata) {
+            if (i==0) {
+                xvals = csvdata[i].slice(1);
+            } else {
+                data.push({y: xvals, x: csvdata[i].slice(1),
+                            name: csvdata[i][0],
+                            type: 'bar',
+                            marker: {color: styles["grey3_accent"]['color'][i]},
+                            width: "auto",
+                            orientation: "v",
+                        })
+            }
+        }
+        
+        var layout = {
+            title: "Drive Days Exceeding Legal Limits",
+            yaxis: {
+                    autotick: false,
+                    title: "",
+                    },
+            xaxis: {
+                    rangemode: 'tozero',
+                    tickformat: tfs["tf1"],
+                    title: {text: "",
+                            standoff: 20}
+                    },
+            barmode: "stack",
+            legend: {"orientation": "h", "traceorder": "normal"},
+            }
+    } else {
+        for (let i in csvdata) {
+            if (i==0) {
+                xvals = csvdata[i].slice(1);
+            } else {
+                data.push({x: xvals, y: csvdata[i].slice(1),
+                            name: csvdata[i][0],
+                            type: 'bar',
+                            marker: {color: styles["grey3_accent"]['color'][i]},
+                            width: "auto",
+                        })
+            }
+        }
+        
+        var layout = {
+            title: "Drive Days Exceeding Legal Limits",
+            xaxis: {
+                    autotick: false,
+                    title: {text: "",
+                            standoff: 40}
+                    },
+            yaxis: {
+                    rangemode: 'tozero',
+                    tickformat: tfs["tf1"],
+                    title: "",
+                    },
+            barmode: "stack",
+            bargap: 0.5,
+            legend: {"orientation": "h", "traceorder": "normal", "x": 0.5, "xanchor": "center"},
+            } 
+        };
+    
+    var config = {responsive: false};
+    Plotly.plot("Fig19", data, layout, config);
+</script>
+<figcaption>Figure 19: Driver Days Exceeding Legal Limits</figcaption><br/>
+<h2 id="how-many-miles-a-day-does-a-driver-drive">How many miles a day does a driver drive?</h2>
+<p>Mileage is related to vehicle wear-and-tear and fuel consumption, both of which are costs to the driver, and when compared to completed trips and driver hours can give insights into efficiency.  Daily driver mileage is reported in the Number of Miles report.</p>
+<p>Table 27 shows the average VMT per driver day for each company, before and during Covid.  Uber drivers’ average daily VMT was lower than Lyft drivers’, both before and during Covid.  Uber driver’s average daily VMT declined only slightly, while Lyft driver’s average daily VMT increased by over 6%.  Both observations diverge from trends in driver hours, presented in Section 8.2, where Uber drivers drove more hours than Lyft drivers, and Uber driver’s average hours increased, and Lyft driver’s average hours remained flat.</p>
+<p>Table 27: Average VMT per Driver Day by Company, Before and During Covid</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align:right">Uber</th>
+<th style="text-align:right">Lyft</th>
+<th style="text-align:right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-Covid</td>
+<td style="text-align:right">68.8</td>
+<td style="text-align:right">78.4</td>
+<td style="text-align:right">75.0</td>
+</tr>
+<tr>
+<td>Covid</td>
+<td style="text-align:right">68.0</td>
+<td style="text-align:right">83.4</td>
+<td style="text-align:right">76.4</td>
+</tr>
+<tr>
+<td>Total</td>
+<td style="text-align:right">68.5</td>
+<td style="text-align:right">79.6</td>
+<td style="text-align:right">75.4</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 20 shows the distribution of driver days.  Uber reported driver days with up to 1,000 miles, and Lyft reported driver days with up to 1,725 miles.  The latter would require driving continuously for 24 hours at over 70 miles an hour.  This implausible outcome is yet another example of the CPUC’s failure to develop or enforce sensible reporting standards.  Uber’s driver days peaked between 20 and 30 miles per day, and were similarly high from 10 miles per day to 40 miles per day, both before and during Covid, gradually declining with longer days.  Lyft’s driver days had a more exaggerated peak between 0 and 10 miles per day, dropping off steeply between 10 and 20 miles per day, and declining more gradually with more than 20 miles per day.</p>
+<div id='Fig20' style="height:full;width:full">
+</div>
+<script>
+    var csvdata = [["Segment","0","10","20","30","40","50","60","70","80","90","100","110","120","130","140","150","160","170","180","190","200","210","220","230","240","250","260","270","280","290","300","310","320","330","340","350","360","370","380","390","400","410","420","430","440","450","460","470","480","490","500","510","520","530","540","550","560","570","580","590","600","610","620","630","640","650","660","670","680","690","700","710","720","730","740","750","760","770","780","790","800","810","820","830","840","850","860","870","880","890","900","910","920","930","940","950","960","970","980","990","1000","1010","1020","1030","1040","1050","1060","1070","1080","1090","1100","1110","1120","1130","1140","1150","1160","1170","1180","1190","1200","1210","1220","1230","1240","1250","1260","1270","1280","1290","1300","1310","1320","1330","1340","1350","1360","1370","1380","1390","1400","1410","1420","1430","1440","1450","1460","1470","1480","1490","1500"],["Uber, Pre-Covid","969","543,213","638,522","643,787","628,655","601,777","560,264","516,651","467,880","415,623","363,599","312,176","263,125","222,026","183,867","151,488","122,822","97,467","76,096","59,055","44,598","33,652","25,074","18,228","13,270","9,229","6,660","4,697","3,377","2,283","1,649","1,009","725","522","314","271","182","105","75","60","44","36","21","14","15","16","10","11","8","5","3","5","2","2","0","3","1","1","0","1","1","0","2","0","0","0","1","0","0","2","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1","0","0","0","0","0","0","1","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["Lyft, Pre-Covid","0","1,201,623","858,535","839,952","813,296","787,142","749,222","702,702","648,160","591,911","538,301","483,243","431,383","379,607","332,002","288,828","249,703","213,293","181,131","153,899","129,252","107,458","89,129","73,439","59,618","48,397","38,857","30,843","24,515","19,217","15,330","11,940","9,443","7,306","5,840","4,407","3,376","2,606","2,054","1,628","1,209","883","763","584","506","326","271","214","184","165","111","90","76","57","38","31","30","33","31","23","18","12","17","23","16","10","3","4","12","12","9","3","7","3","6","4","5","1","1","1","2","2","1","2","0","3","1","1","3","1","0","2","4","4","8","7","4","3","2","1","0","1","0","2","0","0","0","0","0","1","0","1","2","1","0","1","0","1","2","2","3","0","0","0","1","2","0","2","0","0","2","0","0","0","0","0","1","1","1","4","1","0","1","2","1","0","5","5","2","0","1"],["Uber, Covid","266","244,063","263,972","249,886","232,398","215,982","195,802","176,055","157,389","140,116","122,051","104,233","88,604","75,383","64,392","53,807","45,157","38,041","31,657","26,028","21,585","17,293","14,064","11,257","8,873","7,199","5,772","4,557","3,575","2,768","2,088","1,691","1,370","934","720","571","439","321","245","189","150","97","103","67","51","37","33","15","31","22","15","9","15","12","6","4","6","10","7","4","4","6","3","5","4","1","1","2","1","2","2","3","0","2","1","0","1","2","0","2","1","1","0","0","0","1","0","1","0","1","0","0","1","0","2","0","0","0","1","0","1","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"],["Lyft, Covid","0","282,203","164,078","160,361","155,740","151,721","147,164","141,275","133,903","125,712","117,801","108,054","99,702","90,192","81,307","72,878","64,805","56,712","49,369","42,760","37,374","31,807","27,272","22,776","19,344","16,208","13,562","10,977","9,169","7,282","5,682","4,651","3,672","2,900","2,266","1,719","1,315","989","748","564","437","290","255","181","153","137","109","84","52","58","38","34","19","14","11","14","13","7","11","5","1","4","1","1","1","1","2","3","2","1","0","0","0","1","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"]];
+
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#8CB8CA', '#D4D757'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'style2': {
+            'color': ['', '#FF8F6E', '#93BBCC', '#A8A9AB', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid']
+        },
+        'style3': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'ta': {
+            'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta2': {
+            'color': ['', '#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta3': {
+            'color': ['', '#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'tnc': {
+            'color': ['', '#8c8d98', '#f5a7e1','#c5c5c5'],
+            'dash': ['', 'solid', 'solid','dot']
+        },
+        'tnc_alt_dash': {
+            'color': ['', '#8c8d98', '#f5a7e1','#8c8d98', '#f5a7e1',],
+            'dash': ['', 'solid', 'solid','dot','dot']
+        },
+        'ta_grey_teal': {
+            'color': ['', '#d7d7d7', '#006c69'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_gold': {
+            'color': ['', '#d7d7d7', '#ffb81d'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_ruby': {
+            'color': ['', '#d7d7d7', '#c41d4a'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_midnight': {
+            'color': ['', '#d7d7d7', '#1c355e'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_karl': {
+            'color': ['', '#d7d7d7', '#b9d9ec'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_baygreen': {
+            'color': ['', '#d7d7d7', '#a0d0cb'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'colorblind': {
+            'color': ['', '#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'extended': {
+            'color': ['', '#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%'
+    }
+    var data = [];
+    var xvals;
+    for (let i in csvdata) {
+        if (i==0) {
+            xvals = csvdata[i].slice(1);
+        } else {
+            data.push({x: xvals, y: csvdata[i].slice(1),
+                        name: csvdata[i][0],
+                        type: 'scatter',
+                        marker: {color: styles["tnc_alt_dash"]['color'][i]},
+                        line: {dash: styles["tnc_alt_dash"]['dash'][i]}
+                    })
+        }
+    }
+    var layout = {
+        title: "Distribution of Driver Days by Miles Driven",
+        xaxis: {
+                autotick: true,
+                },
+        yaxis: {
+                rangemode: 'tozero',
+                tickformat: tfs["tf1"]
+                },
+    };
+    var config = {responsive: false};
+    Plotly.plot("Fig20", data, layout, config);
+</script>
+<figcaption>Figure 20: Distribution of Driver Days by Miles Driven</figcaption><br/>
+<p>This suggests that either the Covid pandemic had different effects on Uber than on Lyft, or that each company applied different reporting practices, or that each companies reporting practices changed in different ways before and during the pandemic.</p>
+
+		</div>
+	</section>
+</article>
+				
+					<footer id="footer">
+						<ul class="icons">
+              
+              
+              
+              
+              
+              
+
+						</ul>
+						<ul class="copyright">
+              <li>&copy; 2023 SFCTA</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+      
+
+
+
+
+
+
+
+
+
+<script src="/tncs2020/js/bundle.min.e782e74b6a26b3617d7b8d54226975384ec8c8ea308372a74df0ab1963ec7e41b87330abd1910eec69ef09bdf08a12bf1bcb5321cc4077c8d0a6c00825fc56b5.js" integrity="sha512-54LnS2oms2F9e41UIml1OE7IyOowg3KnTfCrGWPsfkG4czCr0ZEO7GnvCb3wihK/G8tTIcxAd8jQpsAIJfxWtQ=="></script>
+
+
+	</body>
+</html>
+

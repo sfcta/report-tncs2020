@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TNCs 2020 Beta</title>
+    <link>http://prospector/tncs2020/</link>
+    <description>Recent content on TNCs 2020 Beta</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://prospector/tncs2020/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Executive Summary</title>
+      <link>http://prospector/tncs2020/ch0_exec_summ/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch0_exec_summ/</guid>
+      <description>Transportation Network Companies (TNCs) such as Uber and Lyft began providing on-demand, app-based transportation services in California in 2009. In 2012, the California Public Utilities Commission (CPUC) began formally regulating TNCs in the state, and since 2014, TNCs operating in California have been required to submit annual reports to the CPUC. These annual reports contain information about a wide range of topics, including but not limited to trip requests and completions, accidents and incidents, assaults and harassment, and miles and hours driven.</description>
+    </item>
+    
+    <item>
+      <title>Findings</title>
+      <link>http://prospector/tncs2020/ch8_findings/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch8_findings/</guid>
+      <description>The 2020 Annual Reports collected from Uber and Lyft by the CPUC reveal regulatory failure on part of the CPUC and compliance failure on part of Uber and Lyft. It also reveals the near-exclusive concentration of TNC activity in urban areas and potentially profound issues of public safety, labor, environment, and accessibility.
+The CPUC has failed to develop and enforce coherent and useful data reporting requirements. As a consequence, the impacts of TNCs on public safety, congestion, the environment, and equity have been largely unexamined.</description>
+    </item>
+    
+    <item>
+      <title>Accessibility</title>
+      <link>http://prospector/tncs2020/ch7_accessibility/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch7_accessibility/</guid>
+      <description>The TNC Access for All Act (Senate Bill No. 1376) directs the CPUC to “establish a program relating to accessibility for persons with disabilities, including wheelchair users who need a wheelchair-accessible vehicle (WAV)”. Under the program, TNCs collect a fee on each trip which is remitted to an Access Fund to be used to pay for “on-demand transportation […] to meet the needs of persons with disabilities, including wheelchair users who need a WAV”.</description>
+    </item>
+    
+    <item>
+      <title>Environment</title>
+      <link>http://prospector/tncs2020/ch6_environment/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch6_environment/</guid>
+      <description>This section examines carbon dioxide (CO2), a greenhouse gas that contributes to global climate change, and particulate matter of less than 2.5 microns (PM2.5) which contributes to respiratory health issues. The Clean Miles Standard and Incentives Program (Senate Bill No. 1014) directed the CPUC to implement “annual targets and goals, beginning in 2023, for the reduction […] of emissions of greenhouse gases per passenger-mile driven on behalf of a transportation network company”.</description>
+    </item>
+    
+    <item>
+      <title>Labor</title>
+      <link>http://prospector/tncs2020/ch5_labor/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch5_labor/</guid>
+      <description>This section examines hours worked, miles driven, and driver suspensions.
+Each record in the Number of Hours and Number of Miles reports is a driver day. Driver IDs are withheld from the public TNC Annual Reports, limiting analysis of driver patterns such as the number of drivers who exceed drive-time limits multiple times a year or distributions of annual driver mileage.
+How many hours a day does a driver drive? The daily number of hours worked can identify when state law is violated, and can also give insights into labor conditions and driver earning potential.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>http://prospector/tncs2020/ch1_introduction/</link>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch1_introduction/</guid>
+      <description>Transportation Network Companies (TNCs) such as Uber and Lyft began providing on-demand, app-based transportation services in California in 2009. Since 2014, TNCs operating in California have been required to submit annual reports to the California Public Utilities Commission (CPUC). These annual reports contain information about a wide range of topics, including but not limited to trip requests and completions, accidents and incidents, assaults and harassment, and miles and hours driven. In February 2022, the SFCTA obtained the 2020 TNC Annual Report for Uber and Lyft.</description>
+    </item>
+    
+    <item>
+      <title>Appendix A: Major CPUC Decisions on Data Reporting and Confidentiality</title>
+      <link>http://prospector/tncs2020/xa_cpuc_decisions/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/xa_cpuc_decisions/</guid>
+      <description>Document Published Description Order Instituting Rulemaking 12/20/2012 Opens Rulemaking R12-12-011 Decision 13-09-045 9/23/2013 Establishes annual reporting requirements, including trip-level data. Footnote 42 is grants a presumption of confidentiality to Annual Reports. Decision 16-04-041 4/25/2016 Directs TNCs to submit plans for studying impacts to traffic-related injuries, impacts to the environment, traffic congestion, and VMT, and directs TNCs to demonstrate that fares are calculated by time and distance for fare-splitting rides in accordance with Pub.</description>
+    </item>
+    
+    <item>
+      <title>Compliance &amp; Integrity</title>
+      <link>http://prospector/tncs2020/ch2_compliance/</link>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch2_compliance/</guid>
+      <description>This section examines whether the 2020 Annual Reports for Uber and Lyft comply with reporting requirements, and whether the data they contain is logical and internally consistent. Data compliance and integrity is a prerequisite for useful analysis to enforce regulations and guide the development of public policy.
+Are TNCs submitting the required reports? Both companies filed the required 2020 Annual Reports. In February 2022, the SFCTA requested and received the Public 2020 Annual Reports for Uber and Lyft from the CPUC.</description>
+    </item>
+    
+    <item>
+      <title>Public Safety</title>
+      <link>http://prospector/tncs2020/ch4_public_safety/</link>
+      <pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch4_public_safety/</guid>
+      <description>The Passenger Charter-party Carriers’ Act, enacted in 1961, authorizes the CPUC to regulate “[t]he use of public highways for the transportation of passengers for compensation … and to promote carrier and public safety through its safety enforcement regulations.” The CPUC requires TNCs submit a number of annual reports relevant to passenger and public safety:
+Accidents &amp;amp; Incidents documents vehicle collisions Assaults &amp;amp; Harassments documents reports of assault and harassment Law Enforcement Citations documents citations issued by law enforcement officers Zero Tolerance documents reports of driving under the influence.</description>
+    </item>
+    
+    <item>
+      <title>General Characteristics</title>
+      <link>http://prospector/tncs2020/ch3_general/</link>
+      <pubDate>Mon, 27 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://prospector/tncs2020/ch3_general/</guid>
+      <description>This section describes general characteristics of TNC activity revealed by the 2020 Annual Reports.
+How many TNC trips were taken? Due to internal inconsistencies in the reports noted in the prior section, the number of TNC trips taken vary from 218 million and 277 million trips, a range of 59 million trips. Table 10 shows the reported trip totals by company. It shows Uber’s reported trips ranging from 157 million to 166 million, Lyft’s ranging from 61 million to 111 million, and the total ranging from 218 to 277 million.</description>
+    </item>
+    
+  </channel>
+</rss>

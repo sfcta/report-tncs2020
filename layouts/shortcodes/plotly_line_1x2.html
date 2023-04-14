@@ -1,0 +1,160 @@
+{{ $csvURL1 := .Get "csvfile1" }}
+{{ $csv1 := getCSV "," $csvURL1 }}
+{{ $csvURL2 := .Get "csvfile2" }}
+{{ $csv2 := getCSV "," $csvURL2 }}
+{{ $height := .Get "height" | default "400px" }}
+{{ $width := .Get "width" | default "800px" }}
+{{ $title := .Get "title" | default "" }}
+{{ $subtitle1 := .Get "subtitle1" | default "" }}
+{{ $subtitle2 := .Get "subtitle2" | default "" }}
+{{ $style := .Get "style" | default "style1" }}
+{{ $tf := .Get "tf" | default "tf1" }}
+
+<div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
+
+</div>
+
+<script>
+    var csvdata1 = {{ $csv1 }};
+    var csvdata2 = {{ $csv2 }};
+    
+    var styles = {
+        'style1': {
+            'color': ['', '#8CB8CA', '#D4D757', '#8CB8CA', '#D4D757'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'style2': {
+            'color': ['', '#FF8F6E', '#93BBCC', '#A8A9AB', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid']
+        },
+        'style3': {
+            'color': ['', '#8CB8CA', '#D4D757', '#CA7F9B', '#F7CF3F'],
+            'dash': ['', 'solid', 'solid', 'dot', 'dot']
+        },
+        'ta': {
+            'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta2': {
+            'color': ['', '#006c69',  '#b9d9ec', '#a0d0cb', '#c41d4a', '#ffb81d', '#1c355e'],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta3': {
+            'color': ['', '#ffb81d', '#b9d9ec', '#006c69', '#1c355e', '#a0d0cb', '#c41d4a', ],
+            'dash': ['', 'solid', 'solid', 'solid', 'solid', 'solid', 'solid']
+        },
+        'ta_grey_teal': {
+            'color': ['', '#d7d7d7', '#006c69'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_gold': {
+            'color': ['', '#d7d7d7', '#ffb81d'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_ruby': {
+            'color': ['', '#d7d7d7', '#c41d4a'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_midnight': {
+            'color': ['', '#d7d7d7', '#1c355e'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_karl': {
+            'color': ['', '#d7d7d7', '#b9d9ec'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'ta_grey_baygreen': {
+            'color': ['', '#d7d7d7', '#a0d0cb'],
+            'dash': ['', 'solid', 'solid']
+        },
+        'colorblind': {
+            'color': ['', '#FF8D6D', '#F6CF3F', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        },
+        'extended': {
+            'color': ['', '#FF8D6D', '#EBA65E', '#F6CF3F', '#D4D756', '#9BAE89', '#8CB8CA', '#CD7F9E'],
+        }
+    }
+    
+    var tfs = {
+        'tf1': '',
+        'tf2': ',.0%'
+    }
+    
+    var data = [];
+    var xvals;
+    for (let i in csvdata1) {
+        if (i==0) {
+            xvals = csvdata1[i].slice(1);
+        } else {
+            data.push({x: xvals, y: csvdata1[i].slice(1),
+                        name: csvdata1[i][0],
+                        type: 'scatter',
+                        marker: {color: styles[{{ $style }}]['color'][i]},
+                        line: {dash: styles[{{ $style }}]['dash'][i]},
+                        xaxis: 'x',
+                        yaxis: 'y',
+                    })
+        }
+    }
+    
+      for (let j in csvdata2) {
+        if (j==0) {
+            xvals = csvdata2[j].slice(1);
+        } else {
+            data.push({x: xvals, y: csvdata2[j].slice(1),
+                        name: csvdata2[j][0],
+                        type: 'scatter',
+                        marker: {color: styles[{{ $style }}]['color'][j]},
+                        line: {dash: styles[{{ $style }}]['dash'][j]},
+                        xaxis: 'x2',
+                        yaxis: 'y',
+                        showlegend: false,
+                    })
+        }
+    }
+
+    var layout = {
+        title: {{ $title }},
+        xaxis: {
+                autotick: false,
+                anchor: 'y1',
+                },
+        xaxis2: {
+                autotick: false,
+                anchor: 'y2',
+                },
+        yaxis: {
+                anchor: 'x1',
+                rangemode: 'tozero',
+                tickformat: tfs[{{ $tf }}]
+                },
+        yaxis2: {
+                anchor: 'x2',
+                rangemode: 'tozero',
+                tickformat: tfs[{{ $tf }}],
+                },
+        annotations: [{ xref:'paper',
+                        yref:'paper',
+                        align:'center',
+                        x:0.17,
+                        y:1.15,
+                        text: {{ $subtitle1 }},
+                        showarrow: false,
+                       },
+                      { xref:'paper',
+                        yref:'paper',
+                        xanchor:'center',
+                        x:0.77,
+                        y:1.15,
+                        text: {{ $subtitle2 }},
+                        showarrow: false,
+                       },
+                     ],
+        grid: {rows: 1, columns: 2, subplots:['xy','xy2']},
+        legend: {"orientation": "h",
+                 x: 0,
+                 y: -0.25},
+    };
+    var config = {responsive: false};
+    Plotly.newPlot({{ .Get "id" }}, data, layout, config);
+</script>

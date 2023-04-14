@@ -1,0 +1,159 @@
+baseURL = 'http://prospector/tncs2020/'
+languageCode = 'en-us'
+title = 'TNCs 2020 Beta'
+theme = "spectral" 
+paginate = "5"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+custom_css = "css/styles.css"
+fancytitle = 'TNCs 2020<br /><img height="128" src="images/SFCTA Logo dark-background.png" alt="SFCTA Logo Dark"/>'
+copyright = 'SFCTA'
+startbuttonLink = "#contact"
+
+[params.logo]
+lightMode = "images/SFCTA-Logo.svg"
+
+[[params.menu.main]]
+url = './'
+title = 'Home'
+
+[[params.menu.main]]
+url = 'ch0_exec_summ/'
+title = 'Executive Summary'
+
+[[params.menu.main]]
+url = 'ch1_introduction/'
+title = '1. Introduction'
+
+[[params.menu.main]]
+url = 'ch2_compliance/'
+title = '2. Compliance & Integrity'
+
+[[params.menu.main]]
+url = 'ch3_general/'
+title = '3. General Characteristics'
+
+[[params.menu.main]]
+url = 'ch4_public_safety/'
+title = '4. Public Safety'
+
+[[params.menu.main]]
+url = 'ch5_labor/'
+title = '5. Labor'
+
+[[params.menu.main]]
+url = 'ch6_environment/'
+title = '6. Environment'
+
+[[params.menu.main]]
+url = 'ch7_accessibility/'
+title = '7. Accessibility'
+
+[[params.menu.main]]
+url = 'ch8_findings/'
+title = '8. Findings'
+
+[[params.menu.main]]
+url = 'xa_cpuc_decisions/'
+title = 'Appendix A. Major CPUC Decisions on Data Reporting and Confidentiality'
+
+[params.one]
+enable = true
+title = '<a href="./ch0_exec_summ/">Executive Summary</a>'
+body = '''
+
+'''
+
+[params.two]
+enable = true 
+[[params.two.section]]
+enable = true
+title = '<a href="./ch1_introduction/">CHAPTER 1: Introduction</a>'
+body = '''
+1. What are TNCs?<br/>
+2. What are the 2020 TNC reporting requirements?<br/>
+3. How did the CPUC arrive at these reporting requirements?<br/>
+4. How did the CPUC determine what is confidential vs public data?<br/>
+5. What will this report cover?<br/>
+'''
+img = "./home/uberlyft_tmp.jpeg"
+
+[[params.two.section]]
+enable = true
+title = '<a href="./ch2_compliance/">CHAPTER 2. Compliance and Integrity</a>'
+body = '''
+1. Are TNCs submitting the required reports?<br/>
+2. Are the submitted reports complete?<br/>
+3. Is the reported data internally consistent?<br/>
+4. Summary of internal consistency<br/>
+'''
+img = "./home/uber_ts.png"
+
+[[params.two.section]]
+enable = true
+title = '<a href="./ch3_general/">3. General Characteristics</a>'
+body = '''
+1. How many TNC trips occurred? <br/>
+2. Where did these trips occur? <br/>
+3. When did these trips occur? <br/>
+4. How many miles did TNCs drive? <br/>
+5. How many trips are “pooled”?<br/>
+'''
+img = "./home/banner.jpg"
+
+[[params.two.section]]
+enable = true
+title = '<a href="./ch4_public_safety/">4. Public Safety</a>'
+body = '''
+1. How many public safety issues occurred? <br/>
+2. Where did these public safety issues occur? <br/>
+3. When did these public safety issues occur? <br/>
+4. What types of public safety issues occurred? <br/>
+'''
+img = "./home/incident_rates.png"
+
+[[params.two.section]]
+enable = true
+title = '<a href="./ch5_labor/">5. Labor</a>'
+body = '''
+1. How many hours a day does a driver drive? <br/>
+2. How often are legal drive-time limits exceeded? <br/>
+3. How many miles a day does a driver drive? <br/>
+'''
+img = "./home/drive_time_limits.png"
+
+[[params.two.section]]
+enable = true
+title = '<a href="./ch6_environment/">6. Environment</a>'
+body = '''
+1. How much GHG did TNCs emit? <br/>
+2. How much PM2.5 did TNCs emit? Where? <br/>
+'''
+img = "./home/pm_by_county.png"
+
+[[params.two.section]]
+enable = true
+title = '<a href="./ch7_accessibility/">7. Accessibility</a>'
+body = '''
+1. How many WAV requests were received?  How many were accepted? <br/>
+2. How much WAV service is being provided? <br/>
+3. Is the Annual Report WAV data consistent with the data reported under the Access for All Act?
+4. How many accessibility complaints were received?
+'''
+img = "./home/flywheel_wav.jpeg"
+
+[[params.two.section]]
+enable = true
+title = '<a href="./ch8_findings/">8. Findings</a>'
+body = '''
+'''
+
+[[params.one.link]]
+href = "./ch1_introduction/"
+text = "go."
+special = false
+
+[outputs]
+  home = ["HTML", "RSS","JSON"]
