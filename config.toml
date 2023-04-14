@@ -1,0 +1,177 @@
+baseURL = 'https://tncs2020.sfcta.org/'
+languageCode = 'en-us'
+title = 'TNCs 2020: A Profile of Ride-Hailing in California'
+theme = "spectral" 
+paginate = "5"
+publishDir = "public"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+custom_css = "css/styles.css"
+fancytitle = 'TNCs 2020: A Profile of Ride-Hailing in California<br /><img height="128" src="images/SFCTA Logo dark-background.png" alt="SFCTA Logo Dark"/>'
+copyright = 'SFCTA'
+startbuttonLink = "#"
+
+[params.logo]
+lightMode = "images/SFCTA-Logo.svg"
+
+[[params.menu.main]]
+url = './'
+title = 'Home'
+
+[[params.menu.main]]
+url = 'ch0_exec_summ/'
+title = 'Executive Summary'
+
+[[params.menu.main]]
+url = 'ch1_introduction/'
+title = '1. Introduction and Purpose'
+
+[[params.menu.main]]
+url = 'ch2_compliance/'
+title = '2. Compliance & Integrity'
+
+[[params.menu.main]]
+url = 'ch3_general/'
+title = '3. General Characteristics'
+
+[[params.menu.main]]
+url = 'ch4_public_safety/'
+title = '4. Public Safety'
+
+[[params.menu.main]]
+url = 'ch5_labor/'
+title = '5. Labor'
+
+[[params.menu.main]]
+url = 'ch6_environment/'
+title = '6. Environment'
+
+[[params.menu.main]]
+url = 'ch7_accessibility/'
+title = '7. Accessibility'
+
+[[params.menu.main]]
+url = 'ch8_conclusions/'
+title = '8. Conclusions'
+
+[[params.menu.main]]
+url = 'xa_cpuc_decisions/'
+title = 'Appendix A. Major CPUC Decisions on Data Reporting and Confidentiality'
+
+[params.one]
+enable = true
+title = '<a href="./ch0_exec_summ/">Executive Summary</a>'
+body = '''
+
+'''
+
+[params.two]
+enable = true
+
+[[params.two.section]]
+title = '<a href="./ch1_introduction/">CHAPTER 1: Introduction and Purpose</a>'
+body = '''
+1. What are TNCs?<br/>
+2. Who regulates TNCs in California?<br/>
+3. What are the 2020 TNC reporting requirements?<br/>
+4. How did the CPUC arrive at these reporting requirements?<br/>
+5. How did the CPUC determine what is confidential vs public data?<br/>
+'''
+img = "./home/uberlyft_tmp.jpeg"
+
+[[params.two.section]]
+title = '<a href="./ch2_compliance/">CHAPTER 2. Reporting Compliance and Integrity</a>'
+body = '''
+1. Are TNCs submitting the required reports?<br/>
+2. Are the reports complete?<br/>
+3. Is the reported data internally consistent?<br/>
+'''
+img = "./home/uber_ts.png"
+
+[[params.two.section]]
+title = '<a href="./ch3_general/">3. General Characteristics</a>'
+body = '''
+1. How many TNC trips were taken? <br/>
+2. Where were TNC trips taken? <br/>
+3. When were TNC trips taken? <br/>
+4. How many miles did TNCs drive? <br/>
+5. How many total hours of service does each TNC provide? <br/>
+6. How many trips are “pooled”?<br/>
+7. Where are requests not completed? <br/>
+'''
+img = "./home/banner.jpg"
+
+[[params.two.section]]
+title = '<a href="./ch4_public_safety/">4. Public Safety</a>'
+body = '''
+1. How many TNC public safety incidents were reported? <br/>
+2. Where did public safety incidents occur? <br/>
+3. What types of public safety incidents occurred? <br/>
+4. How many drivers were suspended or deactivated? <br/>
+'''
+img = "./home/incident_rates.png"
+
+[[params.two.section]]
+title = '<a href="./ch5_labor/">5. Labor</a>'
+body = '''
+1. How many days did drivers work? <br/>
+2. How many hours a day do drivers drive?
+3. How often are legal drive-time limits exceeded? <br/>
+'''
+img = "./home/driver_days_by_hours_worked.png"
+
+[[params.two.section]]
+title = '<a href="./ch6_environment/">6. Environment</a>'
+body = '''
+1. How much GHG did TNCs emit? <br/>
+2. How much particulate matter (PM 2.5) did TNCs emit? Where? <br/>
+'''
+img = "./home/pm_by_county.png"
+
+[[params.two.section]]
+title = '<a href="./ch7_accessibility/">7. Accessibility</a>'
+body = '''
+1. How many WAV requests were received?  How many were accepted? <br/>
+2. How much WAV service is being provided? <br/>
+3. Is the Annual Report WAV data consistent with data reported under the Access for All Act? <br/>
+4. How many accessibility complaints were received?
+'''
+img = "./home/flywheel_wav.jpeg"
+
+[[params.two.section]]
+title = '<a href="./ch8_conclusions/">8. Conclusions</a>'
+body = '''
+'''
+
+[params.three]
+enable = true
+title = 'Acknowledgments'
+body = '''
+We wish to thank the following individuals who contributed to this report:
+<h3>PROJECT TEAM</h3><br>
+<h4>San Francisco County Transportation Authority</h4><br>
+Drew Cooper, Senior Transportation Modeler <br>
+Joe Castiglione, Deputy Director for Technology, Data and Analysis <br>
+Jean Paul Velez, Project Management Consultant <br>
+Aliza Paz, Principal Transportation Planner <br>
+Eric Young, Director of Communications <br>
+Maria Lombardo, Chief Deputy Director <br>
+Tilly Chang, Executive Director <br>
+Abe Bingham, Senior Graphic Designer <br>
+<br>
+<a href="https://www.sfcta.org/stay-connected">sfcta.org/stay-connected</a><br>
+<br>
+1455 Market Street, 22nd Floor, San Francisco, CA 94103 <br>
+415-522-4800 <br>
+<a href="mailto:info@sfcta.org">info@sfcta.org</a><br>
+<a href="https://www.sfcta.org">www.sfcta.org</a><br>
+'''
+
+[params.social]
+twitter = "sfcta"
+facebook = "sfcta"
+# linkedin not available for the spectral theme
+# linkedin = "linkedin.com/company/transportation-authority"
+instagram = "sfcta"

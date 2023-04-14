@@ -1,0 +1,86 @@
+{{ $caption := .Get "caption" }}
+{{ $useHeaderRow := .Get "header" }}
+{{ $rows := .Inner | transform.Unmarshal }}
+{{ $bgcolors := .Get "bgcolors" | default ""}}
+{{ $colors := .Get "colors" | default ""}}
+{{ $conds := .Get "conds" | default "" }}
+
+{{ $conds := split $conds "," | append ""}}
+
+{{ $colors := split $colors "," | append ""}}
+{{ $bgcolors := split $bgcolors "," | append ""}}
+{{ $numvals := len $conds }}
+{{ $maxval := sub $numvals 1 }}
+
+<table>
+  <!--{{ with $caption }}<caption>{{ . }}</caption>{{ end }}-->
+  {{ if $useHeaderRow }}
+    {{ $headerRow := index $rows 0 }}
+    {{ $rows = after 1 $rows }}
+    <thead>
+      <tr> 
+        {{ range $i, $d := $headerRow }} 
+          <th style={{ cond (eq $i 0) "text=align:left" "text-align:center" }}>{{ . }}</th> 
+        {{ end }} 
+      </tr>
+    </thead>
+  {{ end }}
+  {{ range $k, $r := $rows }}
+    <tr>
+      {{ range $j, $d := $r }}
+        {{ $align := cond (eq $j 0) "left" "center" }}
+        {{ range $i, $max := (seq $numvals) }}
+        
+          {{ $c := index $conds $i }}
+          {{ $p := index (split $c " ") 0 }}
+          {{ $q := index (split $c " ") 1 }}
+          {{ $t2 := len (findRE "^\\d+$" $q) }}          
+          {{ $isstring := cond (gt $t2 0) false true  }}
+
+          {{ if eq $i $maxval }}
+            {{ if (findRE "^\\d+$" .) }}
+              <td align={{ $align }} class="numeric" bgcolor={{ index $bgcolors $i }}><font color={{ index $colors $i}}>{{ $d }}</font></td>
+            {{ else }}
+              <td align={{ $align }} bgcolor={{ index $bgcolors $i }}><font color={{ index $colors $i}}>{{ $d }}</font></td>
+            {{ end }}
+          {{ else }}
+            {{ if and (not $isstring) (not (cond (gt $d 0) false true)) }}
+              {{ if eq $p "le" }}
+                {{ if le (float $d) (float $q) }}
+                  <td align={{ $align }} bgcolor={{ index $bgcolors $i }}><font color={{ index $colors $i}}>{{ $d | lang.FormatPercent 0 }}</font></td>
+                  {{ break }}
+                {{ end }}
+              {{ else if eq $p "lt" }} 
+                {{ if lt (float $d) (float $q) }}
+                  <td align={{ $align }} bgcolor={{ index $bgcolors $i }}><font color={{ index $colors $i}}>{{ mul (float $d) 100 | lang.FormatPercent 0 }}</font></td>
+                  {{ break }}
+                {{ end }}
+              {{ else if eq $p "eq" }}
+                {{ if eq (float $d) (float $q) }}
+                  <td align={{ $align }} bgcolor={{ index $bgcolors $i }}><font color={{ index $colors $i}}>{{ mul (float $d) 100 | lang.FormatPercent 0 }}</font></td>
+                  {{ break }}
+                {{ end }}
+              {{ else if eq $p "gt" }}
+                {{ if gt (float $d) (float $q) }}
+                  <td align={{ $align }} bgcolor={{ index $bgcolors $i }}><font color={{ index $colors $i}}>{{ mul (float $d) 100 | lang.FormatPercent 0 }}</font></td>
+                  {{ break }}
+                {{ end }}
+              {{ else }}
+                <td align={{ $align }} bgcolor={{ index $bgcolors $maxval }}><font color={{ index $colors $maxval}}>{{ mul (float $d) 100 | lang.FormatPercent 0 }}</font></td>
+              {{ end }}
+            {{ else }}
+              {{ if eq $p "eq" }}
+                {{ if eq $d $q }}
+                  <td align={{ $align }} bgcolor={{ index $bgcolors $i }}><font color={{ index $colors $i}}>{{ $d }}</font></td>
+                  {{ break }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </tr>
+  {{ end }}
+</table>
+
+
