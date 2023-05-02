@@ -41,7 +41,7 @@ Prop D Traffic Congestion Mitigation Tax receipts, which have been irregular.
 
 The following findings summarize the Transportation Authority’s analysis of the 2020
 TNC Annual Reports, which cover the six months before the COVID pandemic and the
-first six months of the pandemic. Transportation patterns changed during the pandemic
+first six months of the  COVID pandemic. Transportation patterns changed during the pandemic
 and continue to evolve. When the 2021 and 2022 Annual Reports are disclosed
 consistent with the CPUC’s data confidentiality rulings, the Transportation Authority will
 prepare summaries for these reporting years as well.

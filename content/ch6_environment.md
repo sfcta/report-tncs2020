@@ -11,6 +11,7 @@ in the 2020 Public Annual Reports. It estimates carbon dioxide (CO2),
 a greenhouse gas that contributes to global climate change, and
 particulate matter of less than 2.5 microns (PM2.5) which contributes to
 respiratory health issues.
+
 The Clean Miles Standard and Incentives Program (Senate Bill No. 1014)
 directed the CPUC to implement “annual targets and goals, beginning
 in 2023, for the reduction [...] of emissions of greenhouse gases per
@@ -32,7 +33,7 @@ by Uber per period.
 TNC service is classified into 3 periods: Period 1 when a driver is available and ready
 to accept a trip, Period 2 when a driver has accepted a trip and is on the way to pick
 up the passenger, and Period 3, when a driver is transporting a passenger from
-origin to destination. CarB’s 2018 Base Year Inventory found that TNCs emit 48%
+origin to destination. CARB's 2018 Base Year Inventory found that TNCs emit 48%
 more greenhouse gases on a per-passenger mile basis than trips taken in private
 vehicles, due in large part to driving without a passenger in Periods 1 and 2. The
 Transportation Authority estimated that Uber emitted 494,000 metric tons of CO2

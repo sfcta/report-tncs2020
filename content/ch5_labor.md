@@ -21,10 +21,10 @@ drive time limits are exceeded, or distributions of annual driver mileage.
 Figure 18 shows the number of driver days each company reported in the Number
 of Hours and Number of Miles reports. As discussed in Chapter 2, these reports are
 internally inconsistent. This figure reveals further inconsistencies. Both companies’ pre-
-COViD, during-COViD, and total driver days are inconsistent, but the differences are much
-greater during COViD. Uber’s driver days differ by 96,000 (1.4%) pre-COViD and differ by
-768,000 (18%) during COViD. Lyft’s driver days differ by 80,000 (0.7%) pre-COViD and
-differ by 2.4 million (101%) during COViD. Lyft reports more driver days than Uber, which
+COVID, during-COVID, and total driver days are inconsistent, but the differences are much
+greater during COVID. Uber’s driver days differ by 96,000 (1.4%) pre-COVID and differ by
+768,000 (18%) during COVID. Lyft’s driver days differ by 80,000 (0.7%) pre-COVID and
+differ by 2.4 million (101%) during COVID. Lyft reports more driver days than Uber, which
 seems contradictory to the higher total number of Uber trips reported in Chapter 3.
 
 {{% plotly_bar id="Fig18" csvfile="content/ch5_labor/driver_days.csv" height="full" width="full" style="uberlyft" orientation="h" %}}
@@ -38,28 +38,29 @@ to each other suggests that reporting requirements are not adequately defined.
 The daily number of hours worked can give insights into labor conditions, serve as an
 indicator of driver fatigue that can lead to unsafe driving, and identify when legal drive
 time limits are violated.
+
 Table 28 shows the average number of hours worked by drivers for each company
-before and during COViD. The table shows that Uber drivers worked more hours per day
-than Lyft drivers, both before and during COViD. Uber drivers increased their average
-daily driving hours during COViD by 14%, from 4.6 to 5.3, while Lyft’s average daily driver
+before and during COVID. The table shows that Uber drivers worked more hours per day
+than Lyft drivers, both before and during COVID. Uber drivers increased their average
+daily driving hours during COVID by 14%, from 4.6 to 5.3, while Lyft’s average daily driver
 hours remained almost flat.
 
-<figcaption>Table 28. Average Hours per Driver Day by Company, Before and During COViD,
+<figcaption>Table 28. Average Hours per Driver Day by Company, Before and During COVID,
 from September 2019 to August 2020</figcaption>
 
 Era | Uber | Lyft | Total
 ---- | ----: | ----: | ----:
-Pre-Covid | 4.6 | 3.8 | 4.2
-Covid | 5.3 | 3.9 | 4.7
+Pre-COVID | 4.6 | 3.8 | 4.2
+COVID | 5.3 | 3.9 | 4.7
 **Total** | **4.9** | **3.8** | **4.3**
 
 Figure 19 shows the distribution of driver days by the number of hours worked by each
-company’s driver, before and during COViD. As with the table above, it shows that Lyft
-reported more driver days and driver hours than Uber before COViD, and fewer driver
-days and driver hours during COViD. Drivers for both companies most frequently drove
-1 hour per day, both before and during COViD, with longer days steadily less frequent.
-Uber’s driver hours during COViD dropped off steeply, unlike Uber’s pre-COViD hours
-or Lyft’s hours before or during COViD. Lyft’s report included 123,000 driver days with
+company’s driver, before and during COVID. As with the table above, it shows that Lyft
+reported more driver days and driver hours than Uber before COVID, and fewer driver
+days and driver hours during COVID. Drivers for both companies most frequently drove
+1 hour per day, both before and during COVID, with longer days steadily less frequent.
+Uber’s driver hours during COVID dropped off steeply, unlike Uber’s pre-COVID hours
+or Lyft’s hours before or during COVID. Lyft’s report included 123,000 driver days with
 0 hours, while Uber’s included no driver days with 0 hours. It is not clear what a driver
 day with 0 hours means. Both companies reported driver days with 10 or more hours,
 which will be discussed in more detail in the next section.
@@ -72,9 +73,9 @@ September 2019 to August 2020</figcaption><br/>
 California law limits drivers providing passenger transportation to “10 hours in any
 24-hour period unless 8 consecutive hours off duty have elapsed.”1 Figure 20 shows
 the share of driver days by number of hours driven for each company. The data may
-indicate that drivers are exceeding legal drive time limits. Before COViD, 8% of Uber’s
-driver days exceeded 10 hours and during COViD 6% exceeded 10 hours. Before and
-during the COViD 4% of Lyft’s driver days exceeded 10 hours. While this report alone
+indicate that drivers are exceeding legal drive time limits. Before COVID, 8% of Uber’s
+driver days exceeded 10 hours and during COVID 6% exceeded 10 hours. Before and
+during the COVID 4% of Lyft’s driver days exceeded 10 hours. While this report alone
 cannot confirm that a violation has occurred due to the 8 hours off duty provision,
 the reports do not account for additional factors like drivers who may be in violation
 due to driving for both services, or whose shifts straddle 2 or more calendar days.

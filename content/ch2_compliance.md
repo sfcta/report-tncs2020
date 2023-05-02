@@ -87,7 +87,7 @@ Inventory for detailed accounting of each report’s completeness.
 A closer look at the data can reveal other issues. For example, Figure 4 shows the daily
 total number of completed trips from Uber’s _Requests Accepted_ report, revealing
 that the first two weeks of March 2020 are missing. This two-week period does not
-correspond with local COViD Shelter-in-Place (SIP) orders, which went into effect the
+correspond with local COVID Shelter-in-Place (SIP) orders, which went into effect the
 week following the missing data. It is unclear whether any other Uber reports are also
 missing data from these two weeks. The redactions and omissions in Lyft’s incomplete
 Requests Accepted report hides these kinds of gaps and irregularities, hampering

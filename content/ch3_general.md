@@ -64,29 +64,28 @@ This section is limited to Uber because Lyft’s 2020 TNC Public Annual Reports 
 missing required data and time information necessary for temporal analysis.
 
 Figure 7 shows the average Uber trips by day of week for the 6 months prior to the
-pandemic and the first 6 months during the pandemic. The figure shows that Uber trips
+COVID pandemic and the first 6 months during the COVID pandemic. The figure shows that Uber trips
 steadily increased from Monday to Friday, are at their highest on Friday and Saturday,
 and their lowest on Sunday. It further shows that trips declined by 80% during the first 6
-months of the pandemic.
+months of the COVID pandemic.
 
 {{% plotly_bar id="Fig7" csvfile="content/ch3_general/trips_by_weekday_uber.csv" height="full" width="full" style="ta-flipped" %}}
-<figcaption>Figure 7. Average Trips by Day of Week, Before and During the Pandemic, from
+<figcaption>Figure 7. Average Trips by Day of Week, Before and During COVID, from
 September 2019 to August 2020</figcaption><br/>
 
 Figure 8 shows Uber trips by time of day for a typical weekday and average Friday
-before and during the pandemic.[^2] Prior to the COViD pandemic, trips had a diurnal
+before and during the COVID pandemic.[^2] Prior to the COVID pandemic, trips had a diurnal
 distribution during typical weekdays: low trip volumes during late night, peaks of
 activity in the morning and early evening when roadway congestion is most severe, and
 sustained but lower volumes throughout the midday. Fridays had a similar morning
 peak, but higher trips throughout the midday, a much larger evening peak, and a third
-late-evening peak. During the pandemic, Uber trips decreased substantially and time-
+late-evening peak. During the COVID pandemic, Uber trips decreased substantially and time-
 of-day profiles were flatter, and peaked earlier, in the mid-afternoon.
 
 [^2]: A typical weekday is an average of non-holiday Tuesdays, Wednesdays, and Thursdays.
 
 {{% plotly_line_1x2 id="Fig8" csvfile1="content/ch3_general/trips_by_hour_typical_weekday_uber.csv" csvfile2="content/ch3_general/trips_by_hour_friday_uber.csv" subtitle1="Typical Weekday" subtitle2="Fridays" height="full" width="full" style="ta-flipped" %}}
-<figcaption>Figure 8. Trip by Time of Day on an Average Typical Weekday and Friday, Before and During the
-Pandemic, from September 2019 to August 2020</figcaption><br/>
+<figcaption>Figure 8. Trip by Time of Day on an Average Typical Weekday and Friday, Before and During COVID, from September 2019 to August 2020</figcaption><br/>
 
 ## How many miles did TNCs drive?
 VMT is a measure of the total amount of travel. It is used in environmental analysis to
@@ -158,16 +157,16 @@ trips are functionally solo TNC trips.
 {{% plotly_bar id="Fig9" csvfile="content/ch3_general/pool_totals-percentages.csv" height="full" width="full" style="tnc" bmode="stack" orientation="h" %}}
 <figcaption>Figure 9. Pooling of Completed Trips from September 2019 to August 2020</figcaption><br/>
 
-Pooling services were suspended starting in March 2020 due to the COViD-19
+Pooling services were suspended starting in March 2020 due to the COVID
 pandemic. Lyft’s reports withheld trip dates and times, so the effect of the pandemic
 on Lyft’s overall pooling rates cannot be evaluated. Uber’s data indicates that 85%
 of all their trips during the reporting period of September 2019 to August 2020
 occurred before shelter-in-place orders went into effect on March 17, 2020. Figure 10
-shows that 15% of Uber’s pre-pandemic trips were requested to be pooled, and 10%
+shows that 15% of Uber’s pre-COVID trips were requested to be pooled, and 10%
 were successfully matched.
 
 {{% plotly_bar id="Fig10" csvfile="content/ch3_general/pool_uber_precovid.csv" height="full" width="full" style="grey3_accent" bmode="stack" orientation="h" %}}
-<figcaption>Figure 10. Pre-pandemic Uber Pooling of Completed Trips</figcaption><br/>
+<figcaption>Figure 10. Pre-COVID Uber Pooling of Completed Trips</figcaption><br/>
 
 Figure 11 shows the pooled requests received by each company. Uber receives more total
 pooled requests, accepts more, and matches more of them than Lyft does. Uber received
