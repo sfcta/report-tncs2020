@@ -154,7 +154,9 @@ successfully matched with another passenger. In
 other words, more than half of pool-requested
 trips are functionally solo TNC trips.
 
-{{% plotly_bar id="Fig9" csvfile="content/ch3_general/pool_totals-percentages.csv" height="full" width="full" style="tnc" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig9" csvfile="content/ch3_general/pool_totals-percentages-uber.csv" height="full" width="full" style="uber3" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig9" csvfile="content/ch3_general/pool_totals-percentages-lyft.csv" height="full" width="full" style="lyft3" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig9" csvfile="content/ch3_general/pool_totals-percentages-total.csv" height="full" width="full" style="grey_ta" bmode="stack" orientation="h" %}}
 <figcaption>Figure 9. Pooling of Completed Trips from September 2019 to August 2020</figcaption><br/>
 
 Pooling services were suspended starting in March 2020 due to the COVID

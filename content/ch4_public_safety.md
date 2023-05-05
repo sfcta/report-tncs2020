@@ -51,7 +51,8 @@ Uber’s, Lyft’s DUI complaints were over 2.5 times Uber’s, and Lyft’s cit
 Uber’s. These figures suggest that the companies may be reporting public safety
 incidents differently, pointing to the need for increased review by regulators.
 
-{{% plotly_bar id="Fig14" csvfile="content/ch4_public_safety/public_safety_incidents_rate.csv" height="full" width="full" style="tnc" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig14" title="Incidents per 100,000 trips from September 2019 to August 2020" csvfile="content/ch4_public_safety/public_safety_incidents_rate-uber.csv" height="full" width="full" style="uber4" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig14" csvfile="content/ch4_public_safety/public_safety_incidents_rate-lyft.csv" height="full" width="full" style="lyft4" bmode="stack" orientation="h" %}}
 <figcaption>Figure 14. Incidents per 100,000 trips from September 2019 to August 2020</figcaption><br/>
 
 ## Where did public safety incidents occur?
@@ -237,14 +238,16 @@ of incident. Figure 16 shows the total driver suspensions for each company. Lyft
 suspended nearly 5 times the number of drivers as Uber. Lyft also permanently
 suspended 50% more drivers than Uber.
 
-{{% plotly_bar id="Fig16" csvfile="content/ch4_public_safety/suspensions.csv" height="full" width="full" style="tnc" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig16" csvfile="content/ch4_public_safety/suspensions-uber.csv" height="full" width="full" style="uber2" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig16" csvfile="content/ch4_public_safety/suspensions-lyft.csv" height="full" width="full" style="lyft2" bmode="stack" orientation="h" %}}
 <figcaption>Figure 16. Driver Suspensions from September 2019 to August 2020</figcaption><br/>
 
 Figure 17 shows driver suspension rates by company. Lyft suspended drivers at
 more than 11 times the rate of Uber and permanently suspended drivers at 15 times
 the rate of Uber.
 
-{{% plotly_bar id="Fig17" csvfile="content/ch4_public_safety/suspension_rates.csv" height="full" width="full" style="tnc" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig17" csvfile="content/ch4_public_safety/suspension_rates-uber.csv" height="full" width="full" style="uber2" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig17" csvfile="content/ch4_public_safety/suspension_rates-lyft.csv" height="full" width="full" style="lyft2" bmode="stack" orientation="h" %}}
 <figcaption>Figure 17. Driver Suspensions per 100,000 Trips from September 2019 to August 2020</figcaption><br/>
 
 These two figures reveal either that each company has significantly different

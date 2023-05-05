@@ -10,6 +10,8 @@
 {{ $bw := .Get "bw" | default "auto" }}
 {{ $yaxis_label := .Get "yaxis_label" | default "" }}
 {{ $xaxis_label := .Get "xaxis_label" | default "" }}
+{{ $xrange_min := .Get "xrange_min" | default "auto" }}
+{{ $xrange_max := .Get "xrange_max" | default "auto" }}
 
 <div id='{{ .Get "id" }}' style="height:{{$height}};width:{{$width}}">
 
@@ -33,6 +35,27 @@
         },
         'uberlyft': {
             'color': ['', '#696b77', '#babbc1', '#f5a7e1', '#f9caed'],
+        },
+        'uber2': {
+            'color': ['', '#c6c6cb', '#8c8d98'],
+        },
+        'uber3': {
+            'color': ['', '#e6e7e8', '#c6c6cb', '#8c8d98'],
+        },
+        'uber4': {
+            'color': ['', '#8c8d98', '#babbc1', '#8c8d98', '#babbc1'],
+        },
+        'lyft2': {
+            'color': ['', '#fad3f0', '#f5a7e1'],
+        },
+        'lyft3': {
+            'color': ['', '#e6e7e8', '#fad3f0', '#f5a7e1'],
+        },
+        'lyft4': {
+            'color': ['', '#f5a7e1', '#f9caed', '#f5a7e1', '#f9caed'],
+        },
+        'grey_ta':{
+            'color': ['', '#e6e7e8', '#cfe7e5', '#9fcfca'],
         },
         'ta': {
             'color': ['', '#006c69', '#a0d0cb', '#b9d9ec', '#ffb81d', '#c41d4a', '#1c355e'],
@@ -118,6 +141,7 @@
                     title: {text: {{ $xaxis_label }},
                             standoff: 20},
                     automargin: true,
+                    range: [{{$xrange_min}}, {{$xrange_max}}]
                     },
             barmode: {{ $bmode }},
             legend: {"orientation": "h", "traceorder": "normal"},
@@ -143,6 +167,7 @@
                     title: {text: {{ $xaxis_label }},
                             standoff: 40},
                     automargin: true,
+                    range: [{{$xrange_min}}, {{$xrange_max}}]
                     },
             yaxis: {
                     rangemode: 'tozero',

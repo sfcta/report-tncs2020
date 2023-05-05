@@ -98,7 +98,8 @@ Figure 2 shows the incident rate per hundred
 thousand trips and suggests that the companies may be reporting public safety
 incidents differently, pointing to the need for increased review by regulators.
 
-{{% plotly_bar id="Fig2" csvfile="content/ch4_public_safety/public_safety_incidents_rate.csv" height="full" width="full" style="tnc" bmode="stack" orientation="h" %}}
+{{% plotly_bar id="Fig2" csvfile="content/ch4_public_safety/public_safety_incidents_rate-uber.csv" height="full" width="full" style="uber4" bmode="stack" orientation="h" xrange_min="0" xrange_max="70" %}}
+{{% plotly_bar id="Fig2" csvfile="content/ch4_public_safety/public_safety_incidents_rate-lyft.csv" height="full" width="full" style="lyft4" bmode="stack" orientation="h" xrange_min="0" xrange_max="70" %}}
 <figcaption>Figure 2. Incidents per 100,000 trips from September 2019 to August 2020</figcaption><br/>
 
 ### LABOR
