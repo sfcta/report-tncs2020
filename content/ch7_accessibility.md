@@ -132,12 +132,12 @@ response time values.” Ruling on Data Submission for Pre-Scheduled Trips, p. 1
 
 <figcaption>Table 35. Comparison of Lyft WAV Requests in the Annual Reports and
 Advice Letters from October 2019 to June 2020</figcaption>
-
-Quarter | Accessibility Report | Advice Letters | Share of Annual Report Totals Reported in Advice Letters
- ----- | ----: | ----: | ----:
-2019 Q4 | 4,252 | 392 | 9%
-2020 Q1 | 3,344 | 3,853 | 115%
-2020 Q2 | 1,307 | 1,572 | 120%
+{{< conditional_format_table_by_condition header=true bgcolors="#ffe8e2,#ffe8e2" colors="#c41d4a,#c41d4a" conds="eq 115%,eq 120%" >}}
+Quarter,Accessibility Report,Advice Letters,Share of Annual Report Totals Reported in Advice Letters
+2019 Q4,4252,392,9%
+2020 Q1,3344,3853,115%
+2020 Q2,1307,1572,120%
+{{< /conditional_format_table_by_condition >}}
 
 Table 36 compares Uber’s completed WAV trips in the Annual Report and Advice
 Letters. Uber’s Advice Letters contained 16% – 32% of the total completed WAV trips in

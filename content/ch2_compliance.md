@@ -32,28 +32,28 @@ Annual Reports are not complete.
 year’s reports were redacted by replacing the contents with “REDACTED”.
 
 <figcaption>Table 2. 2020 Public TNC Annual Report Completeness of Required Public Fields</figcaption>
-{{< conditional_format_table_by_condition header=true bgcolors="#f2f3cc,#fdf5d9,#ffe8e2" colors="#006c69,#3d3d3e,#c41d4a" conds="eq 100%,eq Withheld,lt 100%" >}}
+{{< conditional_format_table_by_condition header=true bgcolors="#f2f3cc,#fdf5d9,#ffe8e2" colors="#006c69,#3d3d3e,#c41d4a" conds="eq 100%,eq Withheld,lt 1" >}}
 Report Name,Uber,Lyft
 Driver Names & IDs,Withheld,Withheld
 Accessibility Report (Confidential),100%,100%
 Accessibility Report (Public),100%,100%
 Accessibility Complaints (Confidential),100%,100%
 Accessibility Complaints (Public),100%,100%
-Accidents & Incidents,95%,87%
-Assaults & Harassments,100%,79%
-50000+ Miles,100%,57%
+Accidents & Incidents,.95,.87
+Assaults & Harassments,100%,.79
+50000+ Miles,100%,.57
 Number of Hours,100%,100%
 Number of Miles,100%,100%
 Driver Training,100%,100%
-Law Enforcement Citations,100%,81%
-Off-platform Solicitation,100%,80%
+Law Enforcement Citations,100%,.81
+Off-platform Solicitation,100%,.80
 Aggregated Requests Accepted,100%,100%
-Requests Accepted,100%,26%
+Requests Accepted,100%,.26
 Aggregated Requests Not Accepted,100%,100%
-Requests Not Accepted,100%,38%
+Requests Not Accepted,100%,.38
 Suspended Drivers,100%,100%
 Total Violations & Incidents,100%,100%
-Zero Tolerance,100%,82%
+Zero Tolerance,100%,.82
 {{< /conditional_format_table_by_condition >}}
 <figcaption><font size=-1><b>Note:</b> The percentages denote the share of required public fields that are present and unredacted in the public annual reports.</font></figcaption><br/>
 
