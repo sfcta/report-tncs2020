@@ -367,6 +367,7 @@ trips in these reports are nearly perfect, differing by 0.004%. But in many case
 not possible to assess consistency because of the increased level of redaction in the
 2021 Public Annual Reports.
 
+<figcaption>Table 17. Summary of Consistency of the 2021 Public TNC Annual Reports</figcaption>
 {{< conditional_format_table header=true bgcolors="#f2f3cc,#fdf5d9,#ffe8e2" colors="#006c69,#3d3d3e,#c41d4a"  cvals="Consistent,Inconsistent,Incomplete" >}}
 Metric, Uber, Lyft
 Total Requests,Inconsistent,Inconsistent
