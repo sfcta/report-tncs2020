@@ -81,8 +81,7 @@ TNCs and ride-hail trips are an
 urban, not a statewide, transportation issue, as shown in Figure 1.
 
 <div id="wrap">
-    <!-- HOTFIX src URL for using git submodules at sfcta.github.io/simwrapper -->
-    <iframe id="scaled-frame" src="https://sfcta.github.io/simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-completed-trips.yaml?embed" height=800 width=100%></iframe>
+    <iframe id="scaled-frame" src="https://sfcta.github.io/report-tncs2020-simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-completed-trips.yaml?embed" height=800 width=100%></iframe>
 </div> 
 <figcaption>Figure 1. Trip Density by Zip Code from September 2019 to August 2020</figcaption><br/>
 

@@ -54,8 +54,7 @@ city’s most congested streets where the city prioritizes sustainable, space-ef
 modes of travel, such as transit, bicycling and walking.
 
 <div id="wrap">
-    <!-- HOTFIX src URL for using git submodules at sfcta.github.io/simwrapper -->
-    <iframe id="scaled-frame" src="https://sfcta.github.io/simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-completed-trips.yaml?embed" height=800 width=100%></iframe>
+    <iframe id="scaled-frame" src="https://sfcta.github.io/report-tncs2020-simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-completed-trips.yaml?embed" height=800 width=100%></iframe>
 </div>
 <figcaption>Figure 6. TNC Trip Density by Zip Code from September 2019 to August 2020</figcaption><br/>
 
@@ -203,15 +202,8 @@ all of these zip codes Lyft received more than 26 million trip requests. It’s 
 unlikely that Lyft’s reported trip completion rates in these zip codes are accurate.
 
 <div id="wrap">
-    <!-- HOTFIX src URL for using git submodules at sfcta.github.io/simwrapper -->
-    <!-- 
-    HOTFIX use static screenshot instead because having more than one
-           simwrapper viz on each page causes them to not load correctly
-    <iframe id="scaled-frame" src="https://sfcta.github.io/simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-trip-accept-uber.yaml?embed" height=800 width=49%></iframe>
-    <iframe id="scaled-frame" src="https://sfcta.github.io/simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-trip-accept-lyft.yaml?embed" height=800 width=49%></iframe>
-    -->
-    <a href="https://sfcta.github.io/simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-trip-accept-uber.yaml"><img src="perfect_trip_acceptance-uber.png" alt="Figure 12a. Zip Codes with Perfect 100% Trip Acceptance Rates from September 2019 to August 2020 for Uber" height="800" width="49%"></a>
-    <a href="https://sfcta.github.io/simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-trip-accept-lyft.yaml"><img src="perfect_trip_acceptance-uber.png" alt="Figure 12b. Zip Codes with Perfect 100% Trip Acceptance Rates from September 2019 to August 2020 for Lyft" height="800" width="49%"></a>
+    <iframe id="scaled-frame" src="https://sfcta.github.io/report-tncs2020-simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-trip-accept-uber.yaml?embed" height=800 width=49%></iframe>
+    <iframe id="scaled-frame" src="https://sfcta.github.io/report-tncs2020-simwrapper/files/simwrapper-data/reports/tncs2020/viz-map-trip-accept-lyft.yaml?embed" height=800 width=49%></iframe>
 </div>
 <figcaption>Figure 12. Zip Codes with Perfect 100% Trip Acceptance Rates from
 September 2019 to August 2020 for Uber (left) and Lyft (right). Click on the images to access the interactive version.</figcaption><br/>
